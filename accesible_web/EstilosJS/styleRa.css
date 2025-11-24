@@ -1,0 +1,330 @@
+@font-face {
+  font-family: Unow;
+  src: url("../Fonts/Unown.ttf");
+}
+
+body {
+  background-color: #f3ecd8;
+  color: #333;
+  font-family: "Georgia", serif;
+  margin: 0;
+}
+
+/* ======== ICONOS ======== */
+.fa-ankh {
+  margin: 20px;
+  font-size: 40px;
+}
+
+/* ======== NAVBAR ======== */
+nav.navbar {
+  position: relative;
+  background-color: #333;
+}
+
+/* Lista principal */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #333;
+  overflow: visible; /* necesario para que se vea el submenu */
+}
+
+/* Items de menú */
+li {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative; /* para posicionar submenu */
+}
+
+/* Enlaces principales */
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  text-decoration: none;
+}
+
+li a:hover,
+li.dropdown:hover .dropbtn {
+  background-color: #111;
+}
+
+/* H1 y H3 en el menú */
+#menu li a h1,
+#menu li a h3,
+.dropbtn h1,
+.dropbtn h3 {
+  font-size: 1.5rem !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: white !important;
+}
+
+/* ======== SUBMENÚ CON ANIMACIÓN ======== */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* justo debajo del li */
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  /* Animación fade-in */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+li.dropdown:hover > .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+  transform: scale(1.05);
+}
+
+/* ======== BOTÓN DE INICIO DE SESIÓN ======== */
+#BotonSesion {
+  background-color: #c0a84e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 168, 78, 0.5);
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#BotonSesion:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 200, 99, 0.8);
+}
+
+#BotonSesion:active {
+  transform: translateY(-50%) scale(0.98);
+  background-color: #bfa53d;
+}
+
+/* ======== CONTENIDO ======== */
+#ContenidoRa {
+  margin: 50px;
+}
+
+h1, h3 {
+  margin-top: 20px;
+  font-size: 27px;
+  text-align: left;
+}
+
+/* ======== IMÁGENES DE RA ======== */
+.NacRa,
+.BarcoSolar,
+.Faraon,
+.Tierra {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  border-radius: 20px;
+  border: 10px solid #b28e02;
+  box-shadow: 0 0 40px rgba(178, 142, 2, 0.7);
+}
+
+.CarasRa {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contenedorDios {
+  position: relative;
+  margin: 0 20px;
+}
+
+.contenedorDios img {
+  width: 298px;
+  height: 612px;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-top: 5px;
+}
+
+.contenedorDios div {
+  font-family: Unow;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2b2b2b;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: center;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contenedorDios:hover div {
+  font-size: 35px;
+  color: #b28e02;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.ArbolGen {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 10px solid #b28e02;
+  box-shadow: 0 0 40px rgba(178, 142, 2, 0.7);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  li a,
+  .dropbtn {
+    padding: 1rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #BotonSesion {
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  #ContenidoRa {
+    margin: 20px 10px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .CarasRa {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .contenedorDios {
+    margin: 15px 0;
+  }
+
+  .contenedorDios img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .contenedorDios div {
+    font-size: 22px;
+  }
+
+  .contenedorDios:hover div {
+    font-size: 26px;
+  }
+
+  .NacRa,
+  .BarcoSolar,
+  .Faraon,
+  .Tierra,
+  .ArbolGen {
+    width: 90%;
+    height: auto;
+    border-width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  li a {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .contenedorDios div {
+    font-size: 18px;
+  }
+
+  .contenedorDios:hover div {
+    font-size: 22px;
+  }
+
+  .NacRa,
+  .BarcoSolar,
+  .Faraon,
+  .Tierra,
+  .ArbolGen {
+    width: 95%;
+    height: auto;
+  }
+
+  .fa-ankh {
+    font-size: 24px;
+    margin: 8px;
+  }
+}

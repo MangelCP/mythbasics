@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Osiris</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/styleOsiris.css">
+</head>
+<body>
+  <!--Menú de la Página-->
+  <nav id="menu" class="navbar">
+    <ul>
+      <li><a href="../PaginaPrincipal/indexEgipcios.html">Inicio Egipcio</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dioses Egipcios</a>
+        <div class="dropdown-content">
+          <a href="./ra.html">Ra</a>
+          <a href="#">Osiris</a>
+          <a href="./sobek.html">Sobek</a>
+          <a href="./thot.html">Thot</a>
+        </div>
+      </li>
+      <li><a href="../ContenidoExtra/preguntas.html">Dudas Frecuentes</a></li>
+      <li><a href="../ContenidoExtra/contacto.html">Contáctanos</a></li>
+      <li><a href="../ContenidoExtra/minijuegos.html"><h1>Minijuegos</h1></a></li>
+      <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+    </ul>
+
+    <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+      Iniciar Sesión
+    </button>
+  </nav>
+
+  <!--Texto de Osiris-->
+  <div id="ContenidoOsiris">
+    <h1><i class="fa-solid fa-ankh"></i>¿Quién fue Osiris?</h1>
+    <h3>
+      Osiris es el dios egipcio asociado con la vida después de la muerte, 
+      la resurrección y la vegetación en el antiguo Egipto. Era considerado el gobernante del inframundo y juez de los muertos. 
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Mitos destacados:</h1>
+    <h3>
+      Uno de los mitos más conocidos sobre Osiris es su asesinato por su hermano Seth, 
+      quien lo desmembró y dispersó sus partes por todo Egipto. Su esposa, Isis, buscó y reunió sus restos, 
+      devolviéndole la vida.
+      <br>
+      Pero había una parte que no se pudo encontrar, por lo que Osiris se sintió indigno de gobernar la tierra,
+      y decidió pasar a gobernar el mundo de los muertos.
+      <div id="Imagen">
+        <div id="imagenesOsiris">
+          <img class="cuerpo" id="cuerpo" src="../imagenes/ImagenesOsiris/cuerpo.jpg" alt="cuerpo">
+        </div>
+      </div>
+    </h3>
+
+    <h3>
+      Osiris también fue venerado por su papel como juez en el inframundo, 
+      donde los corazones de los fallecidos eran pesados en una balanza contra la pluma de la verdad durante el juicio de Osiris.
+      <div id="Imagen">
+        <div id="imagenesOsiris">
+          <img class="juicio" id="juicio" src="../imagenes/ImagenesOsiris/duat.jpg" alt="juicio">
+        </div> 
+      </div>    
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Culto a Osiris</h1>
+    <h3>
+      El culto a Osiris era prominente en la sociedad egipcia y estaba asociado con rituales funerarios
+      y la creencia en la vida después de la muerte. Sus festivales, como el Festival de la Heb Sed,
+      celebraban la renovación de la fuerza vital del faraón, identificado con Osiris.
+      <div id="Imagen">
+        <div id="imagenesOsiris">
+          <img class="festival" id="festival" src="../imagenes/ImagenesOsiris/festival.jpg" alt="festival">
+        </div>
+      </div>
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Hermanos y descendencia de Osiris</h1>
+    <h3>
+      La familia de Osiris es bastante compleja, formada por
+      su esposa y hermana Isis, sus hermanos Neftis, Seth y Horus el Mayor.
+      <div class="FamOsiris">
+        <figure class="contenedorDios">
+          <div class="NomIsis">Isis</div>
+          <img class="Isis" id="Isis" src="../imagenes/ImagenesOsiris/isis.jpg" alt="Isis">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomSeth">Seth</div>
+          <img class="Seth" id="Seth" src="../imagenes/ImagenesOsiris/seth.jpg" alt="Seth">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomNeftis">Neftis</div>
+          <img class="Neftis" id="Neftis" src="../imagenes/ImagenesOsiris/neftis.jpg" alt="Neftis">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomHorusMy">Horus el Mayor</div>
+          <img class="Horus" id="Horus" src="../imagenes/ImagenesOsiris/horus.jpg" alt="Horus">
+        </figure>
+      </div>
+      <br>
+      Y sus hijos: Horus el Menor con Isis y Anubis con Neftis.
+      <div class="FamOsiris">
+        <figure class="contenedorDios">
+          <div class="NomHorusMn">Horus el Menor</div>
+          <img class="Horus" id="Horus" src="../imagenes/ImagenesOsiris/horus.jpg" alt="Horus">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomAnubis">Anubis</div>
+          <img class="Anubis" id="Anubis" src="../imagenes/ImagenesOsiris/anubis.jpg" alt="Anubis">
+        </figure>
+      </div>
+    </h3>
+
+  </div>
+  
+  <script src="../EstilosJS/script.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</body>
+</html>

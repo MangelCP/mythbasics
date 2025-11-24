@@ -1,0 +1,395 @@
+    /* ========  REGLA PARA H1 Y H3 EN EL MENÚ ======== */
+#menu li a h1,
+#menu li a h3,
+.dropbtn h1,
+.dropbtn h3 {
+  font-size: 1.5rem !important; 
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: white !important; 
+}
+ul#menu li:not(.boton-li) a {
+  padding: 1.5rem; /* Esto mantiene padding entre los links, sin afectar las esquinas */
+}
+
+#BotonSesion {
+  margin-left: auto; 
+  margin-right: 1.60em;
+  background-color: #c0a84e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#BotonSesion:hover {
+  background-color: #e6c863;
+  color: #111;
+  transform: scale(1.05);
+}
+
+#game-container {
+      text-align: center;
+      padding: 3rem;
+      font-family: 'Georgia', serif;
+    }
+
+    #pregunta {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .opcion {
+      display: block;
+      background-color: #c0a84e;
+      color: white;
+      border: none;
+      padding: 1rem;
+      margin: 0.5rem auto;
+      width: 60%;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .opcion:hover {
+      background-color: #e6c863;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    #iniciar, #godle-btnD, #godle-btnP,#icons-facil, #icons-dificil, #icons-diario, #ir-juego , #volver {
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      transition: 0.3s;
+    }
+
+    #iniciar:hover, #godle-btnD:hover,#godle-btnP:hover,#icons-facil:hover, #icons-dificil:hover, #icons-diario:hover, #ir-juego:hover , #volver:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    #temporizador {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    #resultado {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      color: #333;
+    }
+
+    .modal-editar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-contenido input {
+  width: 90%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-botones button {
+  margin: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.modal-boton {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #ffd54f, #ffb300);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-boton:hover {
+  background: linear-gradient(135deg, #ffb300, #ffa000);
+}
+
+/* Input de respuesta */
+#respuestaInput {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #d8ae22ff;
+    border-radius: 10px;
+    width: 250px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#respuestaInput:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px #ffcc00aa;
+}
+
+/* Botón Enviar */
+#btnEnviarIcono {
+    margin-left: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnEnviarIcono:hover {
+    background: #ffd633;
+    transform: translateY(-2px);
+}
+
+/* Botón Volver a Minijuegos */
+#btnVolverMinijuegos {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #d8ae22ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnVolverMinijuegos:hover {
+    background: #e0b833;
+    transform: translateY(-2px);
+}
+
+/* Contenedor de input + botón para alinearlos */
+.respuesta-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin-top: 15px;
+    gap: 10px;               
+}
+
+/* Estilo para el emoji del personaje */
+#emojiPista {
+    font-size: 5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#btnEnviarIcono:disabled {
+    background-color: gray !important;
+    color: white !important;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Elimina cualquier efecto hover cuando está deshabilitado */
+#btnEnviarIcono:disabled:hover {
+    background-color: gray !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+
+#tabla-godle {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+}
+
+#tabla-godle th,
+#tabla-godle td {
+  border: 2px solid #555;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+#tabla-godle th {
+  background-color: #333;
+  color: white;
+}
+
+.correcto {
+  background-color: #4caf50;
+  color: white;
+}
+
+.incorrecto {
+  background-color: #f44336;
+  color: white;
+}
+
+.desconocido {
+  background-color: #ccc;
+  color: #555;
+}
+
+#volver {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #ffd86b, #fcad22);
+    color: #2b1900;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+    border: 2px solid #c88900;
+}
+
+#volver:hover {
+    background: linear-gradient(135deg, #ffe9a8, #ffbf40);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+#volver:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+
+/* Estilo para botones de Enviar y Reiniciar */
+#submit-btn,
+#reiniciar-btn {
+  background-color: #c0a84e;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+#submit-btn:hover,
+#reiniciar-btn:hover {
+  background-color: #e6c863;
+  color: #111;
+  transform: scale(1.05);
+}
+
+
+#reiniciar-btn {
+  display: none; 
+}
+
+#submit-btn:disabled {
+  background-color: #888;
+  color: #ddd; 
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Estilo para el input de personaje */
+#respuesta-input {
+  width: 100%;                 
+  max-width: 400px;           
+  padding: 12px 20px;          
+  margin: 10px 0;              
+  border: 2px solid #ccc;      
+  border-radius: 10px;        
+  font-size: 16px;             
+  transition: all 0.3s ease;   
+  outline: none;              
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* Cambio de borde al enfocar */
+#respuesta-input:focus {
+  border-color: #ff9800;       /* Borde naranja */
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3); /* Sombra naranja suave */
+}
+
+/* Placeholder más elegante */
+#respuesta-input::placeholder {
+  color: #999;                /* Gris suave */
+  font-style: italic;          /* Itálico */
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 99;
+  top: 100%; /* justo debajo del input */
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  background-color: #f0f0f0;
+}
+
+.ficha-juego {
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 650px;
+    
+    border: 2px solid rgba(255, 215, 0, 0.55);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ficha-juego:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.selector-modo {
+    text-align: center;
+    margin-bottom: 20px;
+}

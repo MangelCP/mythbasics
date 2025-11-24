@@ -1,0 +1,117 @@
+/* ============================
+   SECCIONES DE ADAPTACIONES
+   ============================ */
+.bloque-adaptaciones {
+  padding: 40px 20px;
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 6px solid #b28e02;
+  box-shadow: 0 0 40px rgba(178, 142, 2, 0.4);
+}
+
+/* Títulos de cada bloque */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  color: #b28e02;
+  text-shadow: 0 0 10px rgba(178, 142, 2, 0.8),
+               0 0 20px rgba(0,0,0,0.6);
+  font-family: 'Georgia', serif;
+}
+
+/* Contenedor de cards (grid adaptable) */
+.contenedor-cards {
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ============================
+   CARDS INDIVIDUALES
+   ============================ */
+.adaptacion-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 5px solid #b28e02;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adaptacion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 45px rgba(178, 142, 2, 0.8);
+}
+
+/* Titulos de cada card */
+.adaptacion-card h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #b28e02;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* Textos */
+.adaptacion-card p {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Imágenes */
+.adaptacion-card img {
+  width: 100%;
+  border-radius: 15px;
+  border: 5px solid #b28e02;
+  box-shadow: 0 0 25px rgba(178, 142, 2, 0.7);
+  max-height: 320px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Tres imágenes de Assassin's Creed */
+#ImagenesAssassin img {
+  margin: 12px auto;
+  max-height: 250px;
+}
+
+/* ============================
+   BOTONES DE MÚSICA
+   ============================ */
+.btn-musica {
+  background-color: #b28e02;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-musica:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: scale(1.07);
+  box-shadow: 0 0 18px rgba(178, 142, 2, 0.9);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 600px) {
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  .adaptacion-card {
+    padding: 15px;
+  }
+}

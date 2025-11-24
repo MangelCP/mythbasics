@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EgyptMythBasics</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+</head>
+<body>
+  <!-- Menu -->
+  <nav class="navbar">
+    <ul id="menu">
+      <li><a href="index.html"><h1>Regreso</h1></a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn"><h3>Dioses Egipcios</h3></a>
+        <div class="dropdown-content">
+          <a href="../Dioses/ra.html">Ra</a>
+          <a href="../Dioses/osiris.html">Osiris</a>
+          <a href="../Dioses/sobek.html">Sobek</a>
+          <a href="../Dioses/thot.html">Thot</a>
+        </div>
+      </li>
+      <li><a href="../ContenidoExtra/preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+      <li><a href="../ContenidoExtra/contacto.html"><h1>Contáctanos</h1></a></li>
+      <li><a href="../ContenidoExtra/minijuegos.html"><h1>Minijuegos</h1></a></li>
+      <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+
+      <!-- Boton Sesion -->
+      <li class="boton-li">
+        <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+          Iniciar Sesión
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!--Contenido Inicial-->
+  <div id="ContenidoInicial">
+    <h1 class="Bienvenida"><i class="fa-solid fa-ankh"></i> Bienvenidos a EgyptMythsBasic <i class="fa-solid fa-ankh"></i></h1>
+    <h3>
+      En esta página les explicaremos de forma sencilla y dinámica todos los misterios
+      que trae consigo una de las mitologías más antiguas en la historia de la humanidad.
+    </h3>
+    <h3>
+      ¿Qué sabéis realmente de Egipto? ¿Conocéis a sus dioses?
+      <br>
+      ¿Conocéis la que dicen fue la civilización más religiosa de todas?
+    </h3>
+    <h3>
+      ¿Quiénes fueron sus dioses?
+      <br>
+      Adéntrate en este misterioso mundo en esta página.
+    </h3>
+    <br>
+    <div id="esfingueImagen">
+      <i class="fa-regular fa-sun" id="sol1"></i>
+      <img class="esfingue" id="esfingue" src="../imagenes/ImagenesInicioEgypt/esfinge.jpg" alt="esfinge">
+      <i class="fa-regular fa-sun" id="sol2"></i>
+    </div>
+    <h3>
+      En los inicios les explicaremos acerca de cuatro dioses en concreto.
+    </h3>
+  </div>
+  
+  <!-- Dioses e Introduccion -->
+  <div id="figuras">
+    <p>
+      <a id="link-ra" href="../Dioses/ra.html"> 
+        <img src="../imagenes/ImagenesInicioEgypt/ra.jpg" alt="Ra_Documento">
+      </a>
+      <br>
+      <strong>Ra, el dios principal de la mitología, dios del sol y de la creación.</strong>
+    </p>
+
+    <p>
+      <a id="link-osiris" href="../Dioses/osiris.html">
+        <img src="../imagenes/ImagenesInicioEgypt/osiris.jpg" alt="Osiris_Documento">
+      </a>
+      <br>
+      <strong>Osiris, dios de los muertos y de la resurrección.</strong>
+    </p>
+
+    <p>
+      <a id="link-sobek" href="../Dioses/sobek.html">
+        <img src="../imagenes/ImagenesInicioEgypt/sobek.jpg" alt="Sobek_Documento">
+      </a>
+      <br>
+      <strong>Sobek, dios de la fertilidad y creador del río Nilo.</strong>
+    </p>
+
+    <p>
+      <a id="link-thot" href="../Dioses/thot.html">
+        <img src="../imagenes/ImagenesInicioEgypt/thot.jpg" alt="Thot_Documento">
+      </a>
+      <br>
+      <strong>Thot, dios de la sabiduría y de los escribas.</strong>
+    </p>
+  </div>
+
+  <script src="../EstilosJS/script.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</body>
+</html>

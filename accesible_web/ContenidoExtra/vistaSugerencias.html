@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets de Contacto</title>
+
+  <!-- RUTAS CORREGIDAS -->
+  <link rel="stylesheet" href="../EstilosJS/styleVistaSugerencias.css">
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+
+  <script src="../EstilosJS/vistaSugerencia.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Tickets de Contacto</h1>
+    <div id="filtros">
+      <div class="filtro">
+      <label for="filtroNombre">Buscar por nombre:</label>
+      <input type="text" id="filtroNombre" placeholder="Nombre, Apellido1, Apellido2">
+    </div>
+
+      <div class="filtro">
+        <label for="filtroTipo">Filtrar por tipo de mensaje:</label>
+        <select id="filtroTipo">
+          <option value="">Todos</option>
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label for="filtroOrden">Ordenar por:</label>
+        <select id="filtroOrden">
+          <option value="nombre">Nombre</option>
+          <option value="fecha">Fecha</option>
+          <option value="prioridad">Prioridad</option>
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label for="filtroModo">Modo:</label>
+        <select id="filtroModo">
+          <option value="asc">Ascendente</option>
+          <option value="desc">Descendente</option>
+        </select>
+      </div>
+    </div>
+
+
+
+    <button id="btnVolver">Volver</button>
+  </header>
+
+  <main>
+    <table id="tablaTickets">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Tipo de Mensaje</th>
+          <th>Mensaje</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Prioridad</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+</body>
+</html>

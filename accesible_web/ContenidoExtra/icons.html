@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Godly Icons - Minijuego</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+  <link rel="stylesheet" href="../EstilosJS/styleMinijuego.css">
+  <script defer src="../EstilosJS/icons.js"></script>
+</head>
+<body>
+<header>
+  <ul id="menu">
+    <li><a href="../PaginaPrincipal/index.html"><h1>Inicio</h1></a></li>
+    <li><a href="preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+    <li><a href="contacto.html"><h1>Contáctanos</h1></a></li>
+    <li><a href="#"><h1>Minijuegos</h1></a></li>
+    <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+    <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+      Inicio Sesión
+    </button>
+  </ul>
+</header>
+
+<main id="game-container" class="godly-container">
+  <h1>Godly Icons</h1>
+  <p id="nivelTitulo"></p>
+  <div id="emojiPista" class="emoji-pista">🟢</div>
+
+  <div class="respuesta-container">
+    <input type="text" id="respuestaInput" list="personajesList" placeholder="Escribe el nombre del personaje">
+    <datalist id="personajesList"></datalist>
+    <button id="btnEnviarIcono" class="btn">Enviar</button> <!-- Botón agregado -->
+  </div>
+
+  <p id="mensaje" style="color:red; font-weight:bold; margin-top:10px;"></p>
+  <button id="btnVolverMinijuegos" class="btn" style="margin-top:20px;">Volver a minijuegos</button>
+  <audio id="musicaFondo" src="../ContenidoExtra/ruthlessness.mp3" autoplay loop></audio>
+</main>
+
+<script defer src="../EstilosJS/script.js"></script>
+<script defer src="../EstilosJS/minijuego.js"></script>
+</body>
+</html>

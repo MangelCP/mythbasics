@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <title>Godle</title>
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+  <link rel="stylesheet" href="../EstilosJS/styleMinijuego.css">
+
+</head>
+<body>
+  <header>
+    <ul id="menu">
+      <li><a href="../PaginaPrincipal/index.html"><h1>Página Principal</h1></a></li>
+      <li><a href="preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+      <li><a href="contacto.html"><h1>Contáctanos</h1></a></li>
+      <li><a href="#"><h1>Minijuegos</h1></a></li>
+      <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+      <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+          Inicio Sesión
+        </button>
+    </ul>
+  </header>
+
+  <main id="game-container">
+    <h1>Godle</h1>
+<p>Adivina el personaje mitológico.</p>
+<br>
+<p>
+  <span style="color: green;">Verde</span> = Correcto, 
+  <span style="color: red;">Rojo</span> = Incorrecto, 
+  <span style="color: #d8ae22ff;">Dorado</span> = Nombre del Personaje
+</p>
+<p>Si todas las casillas estan en <span style="color: green;">Verde</span>, has adivinado al Personaje</p>
+
+    <!-- Tabla de intentos -->
+    <table id="tabla-godle">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Divinidad o Mortal</th>
+            <th>Género</th>
+            <th>Mitología</th>
+            <th>Labor/Relacionado</th>
+            <th>Casado o Soltero</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <br>
+    <input type="text" id="respuesta-input" placeholder="Escribe un personaje..." list="personajes-list">
+    <datalist id="personajes-list">
+
+    </datalist>
+    <button id="submit-btn">Enviar</button>
+
+    <div id="feedback"></div>
+
+    <br>
+    <a id="volver" href="minijuegos.html">Volver a Minijuegos</a>
+    <audio id="musicaFondo" src="../ContenidoExtra/god_games_ultimate.mp3" autoplay loop></audio>
+  </main>
+<script defer src="../EstilosJS/godle.js"></script>
+<script defer src="../EstilosJS/script.js"></script>
+<script defer src="../EstilosJS/minijuego.js"></script>
+</body>
+</html>

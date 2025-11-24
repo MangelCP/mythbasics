@@ -1,0 +1,198 @@
+body {
+  background-color: #1990a5; /* mismo fondo que tus páginas anteriores */
+  font-family: 'Georgia', serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ======== CONTENEDOR DE LOGIN ======== */
+.login-container {
+  background: rgba(243, 236, 216, 0.95); /* tono pergamino translúcido */
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(178, 142, 2, 0.6); /* sombra dorada */
+  font-family: Heorot, Georgia, serif;
+}
+
+/* ======== ICONO ======== */
+.icono-login {
+  font-size: 3em;
+  color: #b28e02; /* dorado */
+  margin-bottom: 10px;
+}
+
+/* ======== TITULO ======== */
+.login-container h1 {
+  color: #b28e02;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-family: Heorot, Georgia, serif;
+}
+
+/* ======== INPUTS ======== */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b28e02;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1em;
+  background-color: #fff7e6;
+}
+
+/* ======== BOTÓN ENTRAR ======== */
+#BotonEntrar {
+  background-color: #b28e02; /* dorado */
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(178, 142, 2, 0.5);
+}
+
+#BotonEntrar:hover {
+  background-color: #e6c863; /* más brillante al pasar el mouse */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(178, 142, 2, 0.8);
+}
+
+/* ======== LINKS EXTRA ======== */
+.extra-links {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.extra-links a {
+  color: #b28e02;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== ESTILOS MODAL ==================== */
+.modal-editar {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px); /* Efecto bonito */
+}
+
+/* Caja blanca del modal */
+.modal-contenido {
+  background: #fff;
+  padding: 25px 20px;
+  width: 340px;
+  max-width: 90%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: modalAppear 0.25s ease-out;
+  border: 2px solid #e2c932;
+}
+
+/* Imagen del modal */
+.modal-contenido img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* Texto del modal */
+.modal-contenido p {
+  margin: 12px 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #333;
+}
+
+/* Input del modal (solo en acertijos) */
+.modal-contenido input {
+  width: 92%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 7px;
+  border: 1px solid #c9c9c9;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+.modal-contenido input:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* ==== BOTONES ==== */
+#modalBotones {
+  margin-top: 12px;
+}
+
+#modalBotones button {
+  margin: 6px;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  background-image: linear-gradient(180deg, #ffdd33, #ffb800);
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  transition: transform 0.15s, background 0.2s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+#modalBotones button:hover {
+  background-image: linear-gradient(180deg, #ffcc00, #e6a700);
+  transform: scale(1.05);
+}
+
+#modalBotones button:active {
+  transform: scale(0.97);
+}
+
+/* Animación de aparición */
+@keyframes modalAppear {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

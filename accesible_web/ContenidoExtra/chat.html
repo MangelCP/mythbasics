@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <title>Chat Grupal</title>
+  <link rel="stylesheet" href="../EstilosJS/styleChat.css">
+  <script src="../EstilosJS/chat.js" defer></script>
+</head>
+<body>
+<div id="modalNormas" class="modal">
+  <div class="modal-contenido">
+    <h2>Normas del Chat</h2>
+    <p>
+      1. Respeta a todos los usuarios.<br>
+      2. No se permiten insultos ni faltas de respeto.<br>
+      3. No compartas información personal.<br>
+      4. No spam.<br>
+      5. Nada de contenido +18 o NSFW<br>
+      6. Disfrutar de los debates mitologicos.<br>
+    </p>
+
+    <div class="modal-buttons">
+      <button id="btnAceptarNormas" class="btn aceptar">Aceptar</button>
+      <button id="btnRegresarNormas" class="btn regresar">Regresar</button>
+    </div>
+  </div>
+</div>
+
+<main class="chat-container">
+  <h1>CHAT</h1>
+
+  <div id="mensajes" class="mensajes"></div>
+
+  <div class="input-container">
+    <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+    <button id="btnEnviar">Enviar</button>
+  </div>
+
+  <button id="btnVolver" class="btn">⬅ Volver</button>
+  
+</main>
+
+</body>
+</html>

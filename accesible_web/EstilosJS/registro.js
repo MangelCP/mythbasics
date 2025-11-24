@@ -1,0 +1,134 @@
+document.getElementById('registroForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  limpiarErrores();
+
+  const nombreInput = document.getElementById('nombre');
+  const nickInput = document.getElementById('usuario');
+  const correoInput = document.getElementById('correo');
+  const passInput = document.getElementById('password');
+  const confirmarInput = document.getElementById('confirmar');
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const mensajeRegistro = document.getElementById('mensajeRegistro');
+
+  const nombre = nombreInput.value.trim();
+  const nick = nickInput.value.trim();
+  const correo = correoInput.value.trim();
+  const contrasena = passInput.value;
+  const confirmar = confirmarInput.value;
+
+  // ---------- VALIDACIONES ----------
+  function validarNombre(nombre) {
+    const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    return nombre.length > 0 && regex.test(nombre);
+  }
+
+  function validarNombreUsuario(usuario) {
+    const tieneLetra = /[A-Za-z]/.test(usuario);
+    const tieneNumero = /[0-9]/.test(usuario);
+    const tieneSimbolo = /[^A-Za-z0-9]/.test(usuario);
+    return usuario.length >= 6 && tieneLetra && tieneNumero && tieneSimbolo;
+  }
+
+  function validarContrasena(pass) {
+    const tieneLetra = /[A-Za-z]/.test(pass);
+    const tieneNumero = /[0-9]/.test(pass);
+    const tieneSimbolo = /[^A-Za-z0-9]/.test(pass);
+    return pass.length >= 8 && tieneLetra && tieneNumero && tieneSimbolo;
+  }
+
+  function validarCorreo(correo) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(correo);
+  }
+
+  function mostrarError(idCampo, mensaje) {
+    const campo = document.getElementById(idCampo);
+    campo.textContent = mensaje;
+    campo.style.display = "block";
+  }
+
+  function limpiarErrores() {
+    document.querySelectorAll(".error").forEach(e => {
+      e.textContent = "";
+      e.style.display = "none";
+    });
+  }
+
+  function mostrarMensajeFinal(texto, exito) {
+    mensajeRegistro.textContent = texto;
+    mensajeRegistro.style.display = "block";
+
+    mensajeRegistro.classList.remove("mensaje-exito", "mensaje-error");
+    mensajeRegistro.classList.add(exito ? "mensaje-exito" : "mensaje-error");
+  }
+
+  // ---------- VALIDAR CAMPOS ----------
+  if (!validarNombre(nombre)) {
+    mostrarError('errorNombre', 'El nombre solo puede tener letras y espacios.');
+    nombreInput.focus();
+    return;
+  }
+
+  if (!validarNombreUsuario(nick)) {
+    mostrarError('errorUsuario', 'El usuario debe tener al menos 6 caracteres, incluyendo letra, número y símbolo.');
+    nickInput.focus();
+    return;
+  }
+
+  if (!validarCorreo(correo)) {
+    mostrarError('errorCorreo', 'Introduce un correo válido (ej: usuario@ejemplo.com).');
+    correoInput.focus();
+    return;
+  }
+
+  if (!validarContrasena(contrasena)) {
+    mostrarError('errorPassword', 'La contraseña debe tener mínimo 8 caracteres, letra, número y símbolo.');
+    passInput.focus();
+    return;
+  }
+
+  if (contrasena !== confirmar) {
+    mostrarError('errorConfirmar', 'Las contraseñas no coinciden.');
+    confirmarInput.focus();
+    return;
+  }
+
+  // ---------- ENVIAR AL SERVIDOR ----------
+  const payload = {
+    nombre,
+    nick,
+    correo,
+    contrasena,
+    rango: 'usuario'
+  };
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Registrando...';
+
+  try {
+    const res = await fetch('http://localhost:3000/registro', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      let msg = await res.text();
+      mostrarMensajeFinal(msg || 'Error al crear la cuenta', false);
+      return;
+    }
+
+    mostrarMensajeFinal('Cuenta creada correctamente. Redirigiendo...', true);
+
+    setTimeout(() => {
+      window.location.href = '../ContenidoExtra/inicioSesion.html';
+    }, 1000);
+
+  } catch (err) {
+    console.error('Error:', err);
+    mostrarMensajeFinal(err.message, false);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Registrarse';
+  }
+});

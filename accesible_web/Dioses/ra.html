@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ra</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/styleRa.css">
+</head>
+<body>
+  <!--Menú de la Página-->
+  <header>
+    <nav id="menu" class="navbar">
+      <ul>
+        <li><a href="../PaginaPrincipal/indexEgipcios.html"><h1>Inicio Egipcio</h1></a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn"><h3>Dioses Egipcios</h3></a>
+          <div class="dropdown-content">
+            <a href="./ra.html">Ra</a>
+            <a href="./osiris.html">Osiris</a>
+            <a href="./sobek.html">Sobek</a>
+            <a href="./thot.html">Thot</a>
+          </div>
+        </li>
+
+        <li><a href="../ContenidoExtra/preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+        <li><a href="../ContenidoExtra/contacto.html"><h1>Contáctanos</h1></a></li>
+        <li><a href="../ContenidoExtra/minijuegos.html"><h1>Minijuegos</h1></a></li>
+        <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+        <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+          Iniciar Sesión
+        </button>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Texto de Ra-->
+  <div id="ContenidoRa">
+    <h1><i class="fa-solid fa-ankh"></i>¿Quién es Ra?</h1>
+    <h3>
+      Ra era conocido como el dios del Sol y la Creación, siendo la cabeza principal del 
+      panteón egipcio y uno de los dioses más venerados por esta civilización.
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Representación de Ra</h1>
+    <h3>
+      Ra es a menudo representado como un hombre con cabeza de halcón, demostrando su conexión con el cielo y la altura.
+      Los antiguos egipcios creían que Ra viajaba por el cielo durante el día y descendía al inframundo por la noche,
+      simbolizando el ciclo diario del sol.
+      <br><br>
+      En ese viaje por el Inframundo, el dios solar debía enfrentar a la serpiente Apofis, representando el mal.
+      El objetivo de Apofis era devorar a Ra, cubriendo el mundo de tinieblas y oscuridad.
+      <img class="BarcoSolar" id="BarcoSolar" src="../imagenes/ImagenesRa/barcoSolar.jpg" alt="BarcoSolar">
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Importancia en la mitología y cultura</h1>
+    <h3>
+      Como dios creador, Ra desempeñaba un papel fundamental en la mitología egipcia, siendo responsable de la creación del mundo
+      y de la humanidad.
+      <br><br>
+      Su culto era ampliamente venerado, y los faraones a menudo se identificaban con Ra, reclamando su
+      descendencia divina y convirtiéndose en los "Hijos de Ra" durante su coronación.
+      <img class="Faraon" id="Faraon" src="../imagenes/ImagenesRa/faraon.jpg" alt="Faraon">
+      Dentro del panteón, Ra era el dios más importante, gobernando tanto en el cielo como en la tierra. Su gobierno en la tierra
+      le generó problemas, haciendo que Ra envejeciera y que muchos le perdieran el respeto.
+      <img class="Tierra" id="Tierra" src="../imagenes/ImagenesRa/tierra.jpg" alt="Tierra">
+    </h3>
+
+    <h1><i class="fa-solid fa-ankh"></i>Las caras de Ra</h1>
+    <h3>
+      Una característica común de este dios es su cambio de forma y nombre según la posición del sol.
+      Estas son las caras de Ra:
+      <div class="CarasRa">
+        <figure class="contenedorDios">
+          <div class="NomKhepri">Khepri</div>
+          <img class="Khepri" id="Khepri" src="../imagenes/ImagenesRa/Khepri.jpg" alt="Khepri" title="Cara del Amanecer">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomRa">Ra</div>
+          <img class="Ra" id="Ra" src="../imagenes/ImagenesRa/Ra.jpg" alt="Ra" title="Cara del Mediodía">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomAtum">Atum</div>
+          <img class="Atum" id="Atum" src="../imagenes/ImagenesRa/Atum.jpg" alt="Atum" title="Cara del Atardecer">
+        </figure>
+      </div>
+    </h3>
+
+    <div id="MitosComunes">
+      <h1><i class="fa-solid fa-ankh"></i>Creación del mundo por Ra</h1>
+      <h3>
+        Ra creó el mundo a partir de la nada. Se dice que surgió de una flor de loto en las aguas primordiales. 
+        Luego formó la tierra, el cielo y todos los seres vivos. Su luz y energía vital dieron origen a
+        la vida en el universo.
+        <img class="NacRa" id="NacRa" src="../imagenes/ImagenesRa/NacRa.jpg" alt="NacRa">
+      </h3>
+
+      <h1><i class="fa-solid fa-ankh"></i>Descendencia de Ra</h1>
+      <h3>
+        La descendencia de Ra es conocida como la Eneada más famosa de la mitología egipcia, 
+        incluyendo dioses importantes como Isis, 
+        <a href="./osiris.html">Osiris</a>, Seth y Neftis.
+        <img class="ArbolGen" id="ArbolGen" src="../imagenes/ImagenesRa/ArbolGen.jpg" alt="ArbolGen">
+      </h3>
+    </div>
+  </div>
+
+  <script src="../EstilosJS/script.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</body>
+</html>

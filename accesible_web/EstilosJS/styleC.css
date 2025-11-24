@@ -1,0 +1,312 @@
+/* ======== ESTILOS DE CABECERA Y MENÚ ======== */
+@font-face {
+  font-family: Unow;
+  src: url("../Fonts/Unown.ttf");
+}
+
+body {
+  background-color: #f3ecd8;
+  color: #333;
+  font-family: 'Georgia', serif;
+  margin: 0;
+}
+
+/* Menú principal */
+ul#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+}
+
+/* Links del menú */
+li {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #111;
+}
+
+/* Dropdown */
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible; 
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+  transform: scale(1.1);
+}
+
+/* H1 y H3 en el menú */
+#menu li a h1,
+#menu li a h3,
+.dropbtn h1,
+.dropbtn h3 {
+  font-size: 1.5rem !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: white !important;
+}
+
+ul#menu li:not(.boton-li) a {
+  padding: 1.5rem; /* Esto mantiene padding entre los links, sin afectar las esquinas */
+}
+
+
+/* Botón inicio de sesión */
+.boton-li { 
+  margin-left: auto; 
+  margin-right: 2rem;
+}
+
+#BotonSesion {
+  background-color: #c0a84e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 168, 78, 0.5);
+}
+
+#BotonSesion:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 200, 99, 0.8);
+}
+
+#BotonSesion:active {
+  transform: scale(0.98);
+  background-color: #bfa53d;
+}
+
+/* ======== ESTILOS DEL CONTENIDO DE CONTACTO ======== */
+#ContenidoContacto {
+  margin: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 27px;
+  text-align: left;
+}
+
+/* Estilo para los labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #392a18;
+}
+
+/* Indicacion de que es Obligatorio */
+label::after {
+  content: ' *';
+  color: #721c24; 
+}
+
+/* ======== ESTILOS FORMULARIO CONTACTO ======== */
+form {
+  max-width: 600px;   /* Antes 400px */
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+fieldset {
+  border-radius: 20px;
+  padding: 30px;       /* Antes 20px */
+  border: 1px solid #ccc;
+}
+
+legend {
+  font-size: 22px;     /* Antes 20px */
+  color: #333;
+  font-weight: bold;
+}
+
+/* Estilos para los campos de entrada, textarea y select */
+input, textarea, select {
+  margin-bottom: 18px;
+  padding: 12px;       /* Antes 8px */
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Estilos boton de envio */
+button#envio {
+  background-color: #392a18; 
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 12px 20px;  /* Antes 10px */
+  font-size: 18px;     /* Antes 16px */
+  font-weight: bold;
+  border-radius: 20px;
+  border: solid black;
+  transition: background-color 1.0s ease, transform 0.3s ease; 
+}
+
+button#envio:hover {
+  background-color: #721c24; 
+  transform: scale(1.2);
+}
+
+/* Estilos para las redes */
+.redes-sociales a {
+  font-size: 60px;
+  color: #392a18;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: color 1.0s ease; 
+}
+
+.redes-sociales a:hover {
+  color: #721c24; 
+  transform: scale(1.2);
+}
+
+#modalMensaje {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modalMensaje .modal-contenido {
+  background-color: #fff4d1;
+  color: #5a3e1b;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 2px solid #c9a35b;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(160,130,60,0.5);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#btnAceptar {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #c9a35b;
+  border: none;
+  border-radius: 6px;
+  color: #fffaf0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnAceptar:hover {
+  background-color: #b48b44;
+}
+
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  body { font-size: 16px; margin: 0; padding: 0; }
+
+  ul#menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  li { float: none; width: 100%; text-align: center; font-size: 1.2rem; }
+  li a, .dropbtn { padding: 1rem; display: block; }
+
+  .dropdown-content { position: static; box-shadow: none; }
+
+  #BotonSesion {
+    float: none;
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  #ContenidoContacto {
+    margin: 20px;
+  }
+
+  h1 { font-size: 2rem; text-align: center; margin-bottom: 0.5rem; }
+  h3 { text-align: center; font-size: 22px; margin: 1rem 0; }
+
+  form { max-width: 90%; }
+  input, textarea, select { font-size: 14px; padding: 10px; }
+  button#envio { font-size: 14px; padding: 10px 16px; }
+
+  .redes-sociales a { font-size: 40px; }
+}
+
+@media (max-width: 480px) {
+  li a { font-size: 1rem; padding: 0.75rem; }
+  #BotonSesion { font-size: 1rem; padding: 0.75rem 1.5rem; }
+
+  h1 { font-size: 1.5rem; }
+  h3 { font-size: 20px; }
+
+  input, textarea, select { font-size: 13px; padding: 8px; }
+  button#envio { font-size: 13px; padding: 6px 10px; }
+
+  .redes-sociales a { font-size: 30px; margin-right: 5px; }
+}

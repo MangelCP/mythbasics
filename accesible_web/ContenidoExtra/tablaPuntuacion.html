@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Puntuaciones</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+  <link rel="stylesheet" href="../EstilosJS/styleMinijuego.css">
+  <link rel="stylesheet" href="../EstilosJS/styleTabla.css">
+</head>
+<body>
+  <header>
+    <div id="usuarioSesion" class="usuario-sesion"></div>
+  </header>
+
+  <main class="tabla-container">
+    <h1>🏆 Tabla de Puntuaciones 🏆</h1>
+
+    <table id="tablaPuntuaciones">
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Usuario</th>
+          <th>Puntos</th>
+          <th id="colAcciones">Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="boton-container">
+      <a href="minijuegos.html" class="volver-btn">⬅️ Volver a Minijuegos</a>
+    </div>
+  </main>
+
+  <div id="modalEditar" class="modal-editar">
+    <div class="modal-contenido">
+      <h2>Editar Usuario</h2>
+
+      <label for="inputNuevoNick">Nuevo nick:</label>
+      <input type="text" id="inputNuevoNick">
+
+      <div class="modal-botones">
+        <button onclick="guardarEdicion()">Guardar</button>
+        <button onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../EstilosJS/tablaPuntuacion.js"></script>
+</body>
+</html>

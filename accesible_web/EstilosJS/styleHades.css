@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Heorot;
+  src: url("../Fonts/heorot.ttf");
+}
+
+body {
+  background-color: #f3ecd8;
+  color: #333;
+  font-family: 'Georgia', serif;
+  margin: 0;
+}
+
+/* ======== ICONOS ======== */
+.fa-solid {
+  margin: 20px;
+  font-size: 40px;
+}
+
+/* ======== MENÚ ======== */
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  height: 80px;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#menu ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+#menu li {
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+#menu li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 1.5rem;
+  line-height: 80px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#menu li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #111;
+  transform: scale(1.05);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+/* ======== SUBMENU ======== */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+li.dropdown:hover > .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+  transform: scale(1.05);
+}
+
+/* Botón sesión posicion*/
+#menu li:last-child {
+  margin-left: auto;
+}
+
+#BotonSesion {
+  background-color: #c0a84e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 168, 78, 0.5);
+}
+
+#BotonSesion:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 200, 99, 0.8);
+}
+
+#BotonSesion:active {
+  transform: scale(0.98);
+  background-color: #bfa53d;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+#ContenidoHades {
+  margin: 120px 50px 50px; /* margen top más grande para que no quede detrás del menú fijo */
+  text-align: left;
+}
+
+h1, h3 {
+  margin-top: 20px;
+  font-size: 27px;
+  text-align: left;
+}
+
+/* ======== IMÁGENES ======== */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 5px solid #b28e02;
+  box-shadow: 0 0 20px rgba(178, 142, 2, 0.8);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+img:hover {
+  box-shadow: 0 0 30px rgba(178, 142, 2, 1);
+}
+
+/* Ajustes específicos de imágenes de Hades */
+.estatua, .casco, .bidente, .inframundo, .heraclesMito, .teseoMito, .sisifoMito, .hadesypersefona, .disney {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Familia de Hades */
+.HadesFamily {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contenedorDios {
+  position: relative;
+  text-align: center;
+}
+
+.contenedorDios img {
+  width: 230px;
+  height: 380px;
+}
+
+.contenedorDios div {
+  font-family: Heorot;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2b2b2b;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contenedorDios:hover div {
+  font-size: 30px;
+  color: #b28e02;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Contenedor de mitos de Hades */
+#mito_Hades {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  body { font-size: 16px; padding: 0 10px; }
+  #menu ul { flex-direction: column; align-items: stretch; }
+  #menu li { width: 100%; text-align: center; font-size: 1.2rem; }
+  #menu li a, .dropbtn { padding: 1rem; line-height: normal; }
+  .dropdown-content { position: static; box-shadow: none; }
+  #ContenidoHades { margin: 140px 20px 20px; text-align: center; }
+  img { width: 90%; height: auto; }
+  .contenedorDios div { font-size: 22px; }
+  .contenedorDios:hover div { font-size: 26px; }
+  .HadesFamily, #mito_Hades { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  #menu li a, .dropbtn { font-size: 1rem; padding: 0.75rem; }
+  h1, h3 { font-size: 20px; }
+  .contenedorDios div { font-size: 18px; }
+  .contenedorDios:hover div { font-size: 22px; }
+}

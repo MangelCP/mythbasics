@@ -1,0 +1,237 @@
+body {
+  background-color: #dacc96;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== MODALES ===== */
+.modal,
+.modal-editar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* fondo oscuro semitransparente */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-contenido,
+.modal-editar .modal-contenido {
+  background: #fffaf0; /* blanco antiguo para mayor contraste */
+  border: 3px solid #d4af37;
+  border-radius: 20px;
+  padding: 25px 30px;
+  width: 85%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #5b3a00;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+ background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-contenido p,
+.modal-editar .modal-contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.modal-contenido input[type="text"],
+.modal-editar .modal-contenido input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  margin-bottom: 20px;
+  outline: none;
+  font-family: 'Georgia', serif;
+  background-color: #fffaf0;
+  color: #5b3a00;
+}
+
+.modal button,
+.modal-editar .modal-contenido button {
+  padding: 10px 20px;
+  border: 2px solid #b8860b;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #f5deb3;
+  color: #5b3a00;
+  text-shadow: 1px 1px 0 #fff8dc;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 5px #0003 inset;
+}
+
+.modal button:hover,
+.modal-editar .modal-contenido button:hover {
+  background-color: #f0d58c;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4) inset;
+}
+
+.modal-editar .btn-aceptar {
+  background-color: #c19a6b;
+  color: #fffaf0;
+}
+
+.modal-editar .btn-cancelar {
+  background-color: #a0522d;
+  color: #fffaf0;
+}
+
+/* ===== BLOQUEO INPUT ===== */
+.bloqueado {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ===== CHAT ===== */
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 3px solid #d4af37;
+  border-radius: 15px;
+  background-color: #3e2e1f;
+  color: #fff8dc;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  font-family: 'Georgia', serif;
+}
+
+.chat-container h1 {
+  text-align: center;
+  color: #f0d58c;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 #5b3a00;
+}
+
+.mensajes {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #5b3a00;
+  border-radius: 10px;
+}
+
+.mensaje {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.mensaje.mine {
+  flex-direction: row-reverse;
+}
+
+.mensaje img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 2px solid #d4af37;
+}
+
+.burbuja {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #deb887;
+  color: #5b3a00;
+  font-family: 'Georgia', serif;
+  box-shadow: inset 1px 1px 3px #0003;
+}
+
+.mensaje.mine .burbuja {
+  background-color: #f0d58c;
+}
+
+.nombre {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  gap: 0;
+}
+
+#inputMensaje {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  outline: none;
+}
+
+#btnEnviar {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background-color: #c19a6b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnEnviar:hover {
+  background-color: #f0d58c;
+}
+
+.acciones {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.acciones button {
+  background-color: #a0522d;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  color: #fffaf0;
+}
+
+.acciones button:hover {
+  transform: scale(1.2);
+  background-color: #c19a6b;
+}
+
+#btnVolver {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid #b8860b;
+  background-color: #c19a6b;
+  color: #fffaf0;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 #fff8dc;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+#btnVolver:hover {
+  background-color: #f0d58c;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4) inset;
+}
+
+/* ===== Animación modal ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

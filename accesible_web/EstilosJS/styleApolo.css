@@ -1,0 +1,305 @@
+/* ======== FUENTES ======== */
+@font-face {
+  font-family: "Heorot";
+  src: url("../Fonts/heorot.ttf");
+}
+
+/* ======== ESTILOS GENERALES ======== */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3ecd8;
+  color: #000;
+  font-family: 'Georgia', serif;
+}
+
+/* ======== MENÚ FIJO ======== */
+.navbar {
+  display: flex;           
+  align-items: center;     
+  justify-content: space-between; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 0;
+  padding: 0 2rem;
+  list-style: none;
+  justify-content: flex-start;
+  gap: 20px; 
+}
+
+#menu .boton-li {
+  margin: 0; 
+
+}
+
+.boton-li{
+   margin-right: 2rem; 
+}
+
+#menu li {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+#menu li a, .dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  height: 80px;
+  font-size: 1.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#menu li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #111;
+  transform: scale(1.05);
+}
+
+#menu li a h1,
+#menu li a h3,
+.dropbtn h1,
+.dropbtn h3 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-size: inherit;
+  color: inherit;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+h1, h3 {
+  margin-top: 20px;
+  font-size: 27px;
+  text-align: left;
+}
+
+/* ======== DROPDOWN ======== */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(255, 215, 0, 0.2);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+li.dropdown:hover > .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: #111;
+  transform: scale(1.05);
+}
+
+/* ======== BOTÓN DE SESIÓN ======== */
+#menu .boton-li {
+  margin-left: auto; 
+  margin-right: 2rem;
+}
+
+#BotonSesion {
+  background-color: #c0a84e; 
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 168, 78, 0.5);
+}
+
+#BotonSesion:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 200, 99, 0.8);
+}
+
+#BotonSesion:active {
+  transform: scale(0.98);
+  background-color: #bfa53d;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+#ContenidoApolo {
+  margin: 50px;
+  margin-top: 120px;
+  text-align: left;
+}
+
+/* ======== IMÁGENES ======== */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 5px solid gold;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+img:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+}
+
+/* ======== CONTENEDOR DE DIOSES ======== */
+
+
+.FamiliaApolo, #hijos_Apolo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Orfeo, .Asclepio {
+  width: 300px;   
+  height: 400px;  
+  object-fit: cover; 
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto; 
+}
+
+
+.contenedorDios {
+  position: relative;
+  margin: 0 20px;
+  
+}
+
+.contenedorDios img {
+  width: 298px;
+  height: 612px;
+  border-radius: 20px;
+  border: 5px solid gold;
+  display: block;
+  margin: 5px auto 0 auto;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+  width: 238px;
+  height: 542px;
+}
+
+.contenedorDios img:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+}
+
+.contenedorDios div {
+  font-family: Heorot;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contenedorDios:hover div {
+  font-size: 35px;
+  color: gold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.boton-container {
+  text-align: center; /* centra el botón */
+  margin: 20px 0;     /* margen superior e inferior */
+}
+
+.descargar-btn {
+  background-color: #c0a84e; /* mismo color que #BotonSesion */
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(192, 168, 78, 0.5);
+  display: inline-block;
+}
+
+.descargar-btn:hover {
+  background-color: #e6c863;
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 200, 99, 0.8);
+}
+
+.descargar-btn:active {
+  transform: scale(0.98);
+  background-color: #bfa53d;
+}
+
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  body { font-size: 16px; padding: 0 10px; }
+  #menu { flex-direction: column; align-items: stretch; }
+  #menu li { width: 100%; text-align: center; font-size: 1.2rem; }
+  #menu li a, .dropbtn { padding: 1rem; }
+  .dropdown-content { position: static; box-shadow: none; flex-direction: column; }
+  #ContenidoApolo { margin: 20px 10px; text-align: center; margin-top: 140px; }
+  h1, h3 { text-align: center; font-size: 22px; }
+  img { width: 90%; height: auto; }
+  .contenedorDios img { width: 80%; height: auto; }
+  .contenedorDios div { font-size: 22px; }
+  .contenedorDios:hover div { font-size: 26px; }
+  .FamiliaApolo, #hijos_Apolo { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  #menu li a, .dropbtn { font-size: 1rem; padding: 0.75rem; }
+  h1, h3 { font-size: 20px; }
+  .contenedorDios div { font-size: 18px; }
+  .contenedorDios:hover div { font-size: 22px; }
+}

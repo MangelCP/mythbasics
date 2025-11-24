@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear Cuenta</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/styleCrearCuenta.css" />
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="registro-container">
+    <i class="fa-solid fa-user-plus icono-registro"></i>
+    <h1>Crear Cuenta</h1>
+
+    <form id="registroForm">
+
+      <div class="input-group">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required />
+        <p class="error" id="errorNombre"></p>
+      </div>
+
+      <div class="input-group">
+        <label for="usuario">Nombre de Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Crea un nombre de usuario" required />
+        <p class="error" id="errorUsuario"></p>
+      </div>
+
+      <div class="input-group">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required />
+        <p class="error" id="errorCorreo"></p>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Crea una contraseña" required />
+        <p class="error" id="errorPassword"></p>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmar">Confirmar Contraseña</label>
+        <input type="password" id="confirmar" name="confirmar" placeholder="Repite tu contraseña" required />
+        <p class="error" id="errorConfirmar"></p>
+      </div>
+
+      <button id="BotonRegistrar" type="submit">Registrarse</button>
+
+      <div class="extra-links">
+        <p>¿Ya tienes cuenta? <a href="../ContenidoExtra/inicioSesion.html">Inicia Sesión</a></p>
+        <p><a href="../PaginaPrincipal/index.html">Volver al inicio</a></p>
+      </div>
+    </form>
+
+    <!-- MENSAJE FINAL DE ESTADO -->
+    <div id="mensajeRegistro" class="mensaje-oculto"></div>
+  </div>
+
+  <script src="../EstilosJS/registro.js"></script>
+</body>
+</html>

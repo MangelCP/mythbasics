@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/stylePerfil.css">
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+  <script src="../EstilosJS/perfil.js" defer></script>
+  <script src="../EstilosJS/script.js" defer></script>
+</head>
+
+<body>
+<header>
+  <div class="header">
+    <nav class="navbar">
+      <ul id="menu">
+        <li><a href="../PaginaPrincipal/index.html"><h1>Página Principal</h1></a></li>
+        <li><a href="../ContenidoExtra/preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+        <li><a href="../ContenidoExtra/contacto.html"><h1>Contáctanos</h1></a></li>
+        <li><a href="../ContenidoExtra/minijuegos.html"><h1>Minijuegos</h1></a></li>
+        <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+        <li class="boton-li">
+          <button id="BotonSesion">Cargando...</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="perfil-container">
+  <h1>Perfil de Usuario</h1>
+
+  <!-- Foto de perfil -->
+  <img id="imagenPerfil" class="foto-perfil" src="/imagenes/imagenesPerfiles/perfilDefecto.jpg" alt="Foto de perfil">
+
+  <!-- Input oculto para seleccionar nueva foto -->
+  <input type="file" id="inputFoto" accept="image/*" style="display:none;">
+
+  <h2 id="nombreUsuario">Usuario</h2>
+  <p id="nombre"></p>
+  <p id="rangoUsuario"></p>
+
+  <!-- Botones -->
+  <a href="#" id="btnCambiarFoto" class="btn"><i class="fa-solid fa-image"></i> Cambiar foto</a>
+  <a href="ajustes.html" class="btn"><i class="fa-solid fa-gear"></i> Ajustes de usuario</a>
+  <a href="vistaSugerencias.html" id="btnTickets" class="btn" style="display:none;"><i class="fa-solid fa-ticket"></i> Tickets</a>
+  <a href="#" id="btnPremium" class="btn" style="display:none;"><i class="fa-solid fa-star"></i> Obtener Premium</a>
+    <a href="#" id="btnCerrarSesion" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+  <a href="#" id="btnVolver" class="btn"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+</main>
+</body>
+</html>

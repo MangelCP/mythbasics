@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hades</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/styleHades.css">
+  <script src="../EstilosJS/script.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Menú de la Página -->
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="../PaginaPrincipal/indexGriegos.html">Inicio Griego</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Dioses Griegos</a>
+          <div class="dropdown-content">
+            <a href="./apolo.html">Apolo</a>
+            <a href="./zeus.html">Zeus</a>
+            <a href="#">Hades</a>
+            <a href="./poseidon.html">Poseidón</a>
+          </div>
+        </li>
+        <li><a href="../ContenidoExtra/preguntas.html">Dudas Frecuentes</a></li>
+        <li><a href="../ContenidoExtra/contacto.html">Contáctanos</a></li>
+        <li><a href="../ContenidoExtra/minijuegos.html">Minijuegos</a></li>
+        <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html">Chat</a></li>
+        <li>
+          <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+            Inicio Sesión
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido de Hades -->
+  <div id="ContenidoHades">
+    <h1><i class="fa-solid fa-skull"></i> ¿Quién es Hades?</h1>
+    <h3>
+      Hades es el dios del Inframundo, incluso también se podría considerar como el dios de la riqueza debido a que la tierra
+      proporcionaba los nutrientes que permitían crecer las plantas, y sus debidos minerales.
+    </h3>
+
+    <img class="estatua" id="estatua" src="../imagenes/ImagenesHades/estatua.jpg" alt="estatua">
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Hades era tan malo como lo ponen actualmente?</h1>
+    <h3>
+        La respuesta es sencilla: no, no era tan malo como lo ponen.
+
+        Esto se debe a que en el Renacimiento relacionaban el Inframundo con el Infierno cristiano, incluso cuando se le conocía como el
+        dios más cruel, solamente era debido a que no hacía excepciones; nadie podía evitar la muerte o el destino.
+        <br>
+        <img class="disney" id="disney" src="../imagenes/ImagenesHades/disney.jpg" alt="disney">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Familia de Hades</h1>
+    <h3>
+      Hades es hijo mayor de Cronos, haciéndolo hermano de Zeus, Poseidón, Hera, Demeter y Hestia.
+      Está casado con la diosa Perséfone, hija de Demeter y Zeus.
+      <br>
+      <div class="HadesFamily">
+        <figure class="contenedorDios">
+          <div class="NomZeus">Zeus</div>
+          <img class="Zeus" id="Zeus" src="../imagenes/ImagenesInicioGreek/zeus.PNG" alt="Zeus">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomDemeter">Demeter</div>
+          <img class="Demeter" id="Demeter" src="../imagenes/ImagenesZeus/demeter.png" alt="Demeter">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomPersefone">Perséfone</div>
+          <img class="Persefone" id="Persefone" src="../imagenes/ImagenesHades/persefone.jpg" alt="Perséfone">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomPoseidon">Poseidón</div>
+          <img class="Poseidon" id="Poseidon" src="../imagenes/ImagenesInicioGreek/poseidon.PNG" alt="Poseidón">
+        </figure>
+      </div>
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Elementos de Hades</h1>
+    <h3>
+        Uno de los objetos que recibió Hades por parte de los cíclopes en la Titanomaquia era un casco que le permitía volverse 
+        invisible, habiéndolo prestado una vez a su sobrino Hermes para la Gigantomaquia.
+        <br>
+        <img class="casco" id="casco" src="../imagenes/ImagenesHades/casco.jpg" alt="casco">
+        <br>
+        Muchos piensan que el Bidente es uno de los símbolos originales de Hades, siendo actualmente el más famoso del dios, pero no era
+        un símbolo originario de la antigua Grecia, sino que fue una implementación formada durante el Renacimiento debido a la relación
+        que formaron con el Infierno, ya que en ese arte se solía poner el Bidente como un instrumento de tortura.
+        <br>
+        <img class="bidente" id="bidente" src="../imagenes/ImagenesHades/bidente.jpg" alt="bidente">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Cómo era el reino de Hades?</h1>
+    <h3>
+        El Inframundo griego o el Hades es totalmente diferente al infierno en el que muchos solemos pensar, ya que este era un sitio
+        húmedo y frío, lleno de ríos, siendo el más conocido el río o laguna Estigia, por el cual navega Caronte llevando las almas recién llegadas
+        para su juicio.
+        <br>
+        <img class="inframundo" id="inframundo" src="../imagenes/ImagenesHades/inframundo.jpg" alt="inframundo">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Mitos de Hades</h1>
+    <h3>
+        Hades, a pesar de ser un dios poco popular, tuvo diversos mitos, siendo el ejemplo más conocido el rapto de Perséfone, el cual Zeus
+        permitió para que Hades tuviera una esposa, siendo este el Himno Homérico dedicado a Demeter, madre de Perséfone.
+
+        <br>
+        <br>
+
+        Además de ese mito, ha salido en otros mitos, como en el duodécimo trabajo de Heracles, o en el intento de secuestro de Perséfone del
+        héroe Teseo y su amigo Pirítoo.
+
+        <br>
+
+        Heracles logró liberar al héroe Teseo de su encarcelamiento y llevarse a Cerbero, cumpliendo la condición de Hades de 
+        domar a Cerbero con las manos desnudas.
+
+        <br>
+        <br>
+
+        Para finalizar, debemos mencionar uno de los castigos más populares: el castigo eterno de Sísifo, impuesto por Hades 
+        por haber sido engañado por este con el fin de huir del Inframundo.
+        <br>
+        <div id="mito_Hades">
+          <img class="heraclesMito" id="heraclesMito" src="../imagenes/ImagenesHades/heraclesMito.jpg" alt="heraclesMito">
+          <img class="teseoMito" id="teseoMito" src="../imagenes/ImagenesHades/teseoMito.jpg" alt="teseoMito">
+          <img class="sisifoMito" id="sisifoMito" src="../imagenes/ImagenesHades/sisifo.jpg" alt="sisifoMito">
+        </div>
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Por qué Hades no sale en tantos mitos a comparación de sus hermanos?</h1>
+    <h3>
+        Esto se debe a que Hades, al estar relacionado con la muerte, no era una deidad muy popular, siendo así que 
+        no hubiera tantos templos en su honor a comparación de dioses más populares como Atenea, Apolo o Zeus. Además, 
+        en muchos de los mitos donde intervienen varios dioses, el rey del Hades siempre se mantiene neutral, por lo que 
+        no participa en tantos mitos.
+        <br>
+        <img class="hadesypersefona" id="hadesypersefona" src="../imagenes/ImagenesHades/hadesypersefone.jpg" alt="hadesypersefona">
+    </h3>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hades</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/styleHades.css">
+  <script src="../EstilosJS/script.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/c5814978c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Menú de la Página -->
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="../PaginaPrincipal/indexGriegos.html">Inicio Griego</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Dioses Griegos</a>
+          <div class="dropdown-content">
+            <a href="./apolo.html">Apolo</a>
+            <a href="./zeus.html">Zeus</a>
+            <a href="#">Hades</a>
+            <a href="./poseidon.html">Poseidón</a>
+          </div>
+        </li>
+        <li><a href="../ContenidoExtra/preguntas.html">Dudas Frecuentes</a></li>
+        <li><a href="../ContenidoExtra/contacto.html">Contáctanos</a></li>
+        <li><a href="../ContenidoExtra/minijuegos.html">Minijuegos</a></li>
+        <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html">Chat</a></li>
+        <li>
+          <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+            Inicio Sesión
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido de Hades -->
+  <div id="ContenidoHades">
+    <h1><i class="fa-solid fa-skull"></i> ¿Quién es Hades?</h1>
+    <h3>
+      Hades es el dios del Inframundo, incluso también se podría considerar como el dios de la riqueza debido a que la tierra
+      proporcionaba los nutrientes que permitían crecer las plantas, y sus debidos minerales.
+    </h3>
+
+    <img class="estatua" id="estatua" src="../imagenes/ImagenesHades/estatua.jpg" alt="estatua">
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Hades era tan malo como lo ponen actualmente?</h1>
+    <h3>
+        La respuesta es sencilla: no, no era tan malo como lo ponen.
+
+        Esto se debe a que en el Renacimiento relacionaban el Inframundo con el Infierno cristiano, incluso cuando se le conocía como el
+        dios más cruel, solamente era debido a que no hacía excepciones; nadie podía evitar la muerte o el destino.
+        <br>
+        <img class="disney" id="disney" src="../imagenes/ImagenesHades/disney.jpg" alt="disney">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Familia de Hades</h1>
+    <h3>
+      Hades es hijo mayor de Cronos, haciéndolo hermano de Zeus, Poseidón, Hera, Demeter y Hestia.
+      Está casado con la diosa Perséfone, hija de Demeter y Zeus.
+      <br>
+      <div class="HadesFamily">
+        <figure class="contenedorDios">
+          <div class="NomZeus">Zeus</div>
+          <img class="Zeus" id="Zeus" src="../imagenes/ImagenesInicioGreek/zeus.PNG" alt="Zeus">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomDemeter">Demeter</div>
+          <img class="Demeter" id="Demeter" src="../imagenes/ImagenesZeus/demeter.png" alt="Demeter">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomPersefone">Perséfone</div>
+          <img class="Persefone" id="Persefone" src="../imagenes/ImagenesHades/persefone.jpg" alt="Perséfone">
+        </figure>
+        <figure class="contenedorDios">
+          <div class="NomPoseidon">Poseidón</div>
+          <img class="Poseidon" id="Poseidon" src="../imagenes/ImagenesInicioGreek/poseidon.PNG" alt="Poseidón">
+        </figure>
+      </div>
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Elementos de Hades</h1>
+    <h3>
+        Uno de los objetos que recibió Hades por parte de los cíclopes en la Titanomaquia era un casco que le permitía volverse 
+        invisible, habiéndolo prestado una vez a su sobrino Hermes para la Gigantomaquia.
+        <br>
+        <img class="casco" id="casco" src="../imagenes/ImagenesHades/casco.jpg" alt="casco">
+        <br>
+        Muchos piensan que el Bidente es uno de los símbolos originales de Hades, siendo actualmente el más famoso del dios, pero no era
+        un símbolo originario de la antigua Grecia, sino que fue una implementación formada durante el Renacimiento debido a la relación
+        que formaron con el Infierno, ya que en ese arte se solía poner el Bidente como un instrumento de tortura.
+        <br>
+        <img class="bidente" id="bidente" src="../imagenes/ImagenesHades/bidente.jpg" alt="bidente">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Cómo era el reino de Hades?</h1>
+    <h3>
+        El Inframundo griego o el Hades es totalmente diferente al infierno en el que muchos solemos pensar, ya que este era un sitio
+        húmedo y frío, lleno de ríos, siendo el más conocido el río o laguna Estigia, por el cual navega Caronte llevando las almas recién llegadas
+        para su juicio.
+        <br>
+        <img class="inframundo" id="inframundo" src="../imagenes/ImagenesHades/inframundo.jpg" alt="inframundo">
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> Mitos de Hades</h1>
+    <h3>
+        Hades, a pesar de ser un dios poco popular, tuvo diversos mitos, siendo el ejemplo más conocido el rapto de Perséfone, el cual Zeus
+        permitió para que Hades tuviera una esposa, siendo este el Himno Homérico dedicado a Demeter, madre de Perséfone.
+
+        <br>
+        <br>
+
+        Además de ese mito, ha salido en otros mitos, como en el duodécimo trabajo de Heracles, o en el intento de secuestro de Perséfone del
+        héroe Teseo y su amigo Pirítoo.
+
+        <br>
+
+        Heracles logró liberar al héroe Teseo de su encarcelamiento y llevarse a Cerbero, cumpliendo la condición de Hades de 
+        domar a Cerbero con las manos desnudas.
+
+        <br>
+        <br>
+
+        Para finalizar, debemos mencionar uno de los castigos más populares: el castigo eterno de Sísifo, impuesto por Hades 
+        por haber sido engañado por este con el fin de huir del Inframundo.
+        <br>
+        <div id="mito_Hades">
+          <img class="heraclesMito" id="heraclesMito" src="../imagenes/ImagenesHades/heraclesMito.jpg" alt="heraclesMito">
+          <img class="teseoMito" id="teseoMito" src="../imagenes/ImagenesHades/teseoMito.jpg" alt="teseoMito">
+          <img class="sisifoMito" id="sisifoMito" src="../imagenes/ImagenesHades/sisifo.jpg" alt="sisifoMito">
+        </div>
+    </h3>
+
+    <h1><i class="fa-solid fa-skull"></i> ¿Por qué Hades no sale en tantos mitos a comparación de sus hermanos?</h1>
+    <h3>
+        Esto se debe a que Hades, al estar relacionado con la muerte, no era una deidad muy popular, siendo así que 
+        no hubiera tantos templos en su honor a comparación de dioses más populares como Atenea, Apolo o Zeus. Además, 
+        en muchos de los mitos donde intervienen varios dioses, el rey del Hades siempre se mantiene neutral, por lo que 
+        no participa en tantos mitos.
+        <br>
+        <img class="hadesypersefona" id="hadesypersefona" src="../imagenes/ImagenesHades/hadesypersefone.jpg" alt="hadesypersefona">
+    </h3>
+  </div>
+</body>
+</html>

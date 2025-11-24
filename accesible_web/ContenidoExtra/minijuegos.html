@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minijuego de Mitología</title>
+  <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+  <link rel="stylesheet" href="../EstilosJS/style.css">
+  <link rel="stylesheet" href="../EstilosJS/styleMinijuego.css">
+  <script defer src="../EstilosJS/script.js"></script>
+</head>
+<body>
+  <header>
+    <ul id="menu">
+      <li><a href="../PaginaPrincipal/index.html"><h1>Inicio</h1></a></li>
+      <li><a href="preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+      <li><a href="contacto.html"><h1>Contáctanos</h1></a></li>
+      <li><a href="#"><h1>Minijuegos</h1></a></li>
+      <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+      <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+        Inicio Sesión
+      </button>
+    </ul>
+  </header>
+
+  <main id="game-container">
+
+    <!-- FICHA 1 – Minijuego de Preguntas -->
+    <div class="ficha-juego">
+        <h1>God Knows</h1>
+        <p>Responde a un desafío rápido de conocimiento.</p>
+
+        <button id="ir-juego" onclick="location.href='testPreguntas.html'">
+            Iniciar
+        </button>
+
+        <br>
+
+        <div class="boton-container">
+            <a href="tablaPuntuacion.html" class="ver-puntuaciones-btn">Ver Tabla de Puntuaciones</a>
+        </div>
+    </div>
+
+
+    <!-- FICHA 2 – GODLE -->
+    <div class="ficha-juego">
+        <h1>Godle</h1>
+        <p>Adivina el personaje recibiendo pistas en base a las opciones dadas</p>
+
+        <div class="selector-modo">
+            <button id="godle-btnP" onclick="location.href='godle.html?modo=practica'" class="btn-modo">
+                🟢 Modo Práctica
+            </button>
+
+            <button id="godle-btnD" onclick="location.href='godle.html?modo=diario'" class="btn-modo">
+                ⭐ Personaje Diario
+            </button>
+        </div>
+    </div>
+
+
+    <!-- FICHA 3 – GODLY ICONS -->
+    <div class="ficha-juego">
+        <h1>Godly Icons</h1>
+        <p>Adivina el personaje mitológico usando los emojis como pistas</p>
+
+        <div class="selector-modo">
+            <button id="icons-facil" onclick="location.href='icons.html?nivel=facil'" class="btn-modo facil">
+                🟢 Modo Fácil 
+            </button>
+
+            <button id="icons-dificil" onclick="location.href='icons.html?nivel=dificil'" class="btn-modo dificil">
+                🔴 Modo Difícil
+            </button>
+
+            <button id="icons-diario" onclick="location.href='icons.html?modo=diario'" class="btn-modo diario">
+                ⭐ Personaje Diario
+            </button>
+        </div>
+
+        <p class="nota-iconos">
+            🟢 Modo Fácil: solo mitología griega. <br>
+            🔴 Modo Difícil: mitologías griega, egipcia y nórdica.
+        </p>
+
+        <p class="descripcion-juego">
+            Cada fallo revelará un emoji más hasta adivinar el personaje.
+        </p>
+    </div>
+
+</main>
+
+</body>
+</html>

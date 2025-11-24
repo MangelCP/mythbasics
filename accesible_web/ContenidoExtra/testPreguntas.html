@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="../EstilosJS/style.css">
+    <link rel="stylesheet" href="../EstilosJS/styleMinijuego.css">
+    <script defer src="../EstilosJS/script.js"></script>
+    <script type="module" defer src="../EstilosJS/minijuego.js"></script>
+    <link rel="icon" type="image/x-icon" href="../imagenes/ImagenesInicio/fav.ico">
+    <ul id="menu">
+      <li><a href="../PaginaPrincipal/index.html"><h1>Página Principal</h1></a></li>
+      <li><a href="preguntas.html"><h1>Dudas Frecuentes</h1></a></li>
+      <li><a href="contacto.html"><h1>Contáctanos</h1></a></li>
+      <li><a href="#"><h1>Minijuegos</h1></a></li>
+      <li id="opcionChat" style="display:none;"><a href="../ContenidoExtra/chat.html"><h1>Chat</h1></a></li>
+      <button id="BotonSesion" onclick="window.location.href='../ContenidoExtra/inicioSesion.html'">
+          Inicio Sesión
+        </button>
+    </ul>
+</head>
+<body>
+
+<main id="game-container">
+    <h1>Juego de Preguntas Infinito</h1>
+    <p>Responde las preguntas antes de que acabe el tiempo (10 segundos por pregunta).</p>
+    <p>Si respondes <span style="color: green;">bien</span>, pasaras a la siguiente pregunta.</p>
+    <p>Si respondes <span style="color: red;">mal</span>, se detendrá el juego y se mostrará la respuesta correcta</p>
+
+    <button id="iniciar">Iniciar Preguntas</button>
+
+    <div id="pregunta"></div>
+    <div id="opciones"></div>
+    <div id="temporizador"></div>
+    <div id="resultado"></div>
+
+    <br>
+    <div class="boton-container" id="volver">
+        <a href="minijuegos.html" class="volver-btn">Volver</a>
+    </div>
+    <audio id="musicaFondo" src="../ContenidoExtra/thunder_bringer.mp3" autoplay loop></audio>
+</main>
+
+<script src="preguntasMinijuego.js"></script>
+
+</body>
+</html>
