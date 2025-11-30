@@ -1,5 +1,5 @@
 body {
-  background-color: #1990a5; /* mismo fondo que tus páginas anteriores */
+  background-color: #1990a5; 
   font-family: 'Georgia', serif;
   color: #333;
   margin: 0;
@@ -12,19 +12,19 @@ body {
 
 /* ======== CONTENEDOR DE LOGIN ======== */
 .login-container {
-  background: rgba(243, 236, 216, 0.95); /* tono pergamino translúcido */
+  background: rgba(243, 236, 216, 0.95);
   border-radius: 20px;
   padding: 40px;
   width: 350px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(178, 142, 2, 0.6); /* sombra dorada */
+  box-shadow: 0 0 20px rgba(178, 142, 2, 0.6);
   font-family: Heorot, Georgia, serif;
 }
 
 /* ======== ICONO ======== */
 .icono-login {
   font-size: 3em;
-  color: #b28e02; /* dorado */
+  color: #b28e02;
   margin-bottom: 10px;
 }
 
@@ -61,7 +61,7 @@ body {
 
 /* ======== BOTÓN ENTRAR ======== */
 #BotonEntrar {
-  background-color: #b28e02; /* dorado */
+  background-color: #b28e02; 
   border: none;
   border-radius: 10px;
   padding: 12px 25px;
@@ -76,7 +76,7 @@ body {
 }
 
 #BotonEntrar:hover {
-  background-color: #e6c863; /* más brillante al pasar el mouse */
+  background-color: #e6c863;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(178, 142, 2, 0.8);
 }
@@ -99,7 +99,7 @@ body {
 
 /* ==================== ESTILOS MODAL ==================== */
 .modal-editar {
-  display: none; /* oculto por defecto */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -109,10 +109,10 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  backdrop-filter: blur(3px); /* Efecto bonito */
+  backdrop-filter: blur(3px); 
 }
 
-/* Caja blanca del modal */
+/* Caja modal */
 .modal-contenido {
   background: #fff;
   padding: 25px 20px;
@@ -125,7 +125,7 @@ body {
   border: 2px solid #e2c932;
 }
 
-/* Imagen del modal */
+/* Imagen modal */
 .modal-contenido img {
   max-width: 100%;
   border-radius: 10px;
@@ -133,7 +133,7 @@ body {
   box-shadow: 0 3px 8px rgba(0,0,0,0.25);
 }
 
-/* Texto del modal */
+/* Texto modal */
 .modal-contenido p {
   margin: 12px 0;
   font-size: 17px;
@@ -142,7 +142,7 @@ body {
   color: #333;
 }
 
-/* Input del modal (solo en acertijos) */
+/* Input acertijos */
 .modal-contenido input {
   width: 92%;
   padding: 10px;
@@ -185,7 +185,7 @@ body {
   transform: scale(0.97);
 }
 
-/* Animación de aparición */
+/* Animacion aparicion */
 @keyframes modalAppear {
   0% {
     transform: scale(0.8);

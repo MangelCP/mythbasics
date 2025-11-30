@@ -1,6 +1,6 @@
-// --- Función para mostrar modal desde JS ---
+// --- mostrar modal ---
 const mostrarModal = (mensaje, callback) => {
-  // Crear contenedor modal
+  // Crear contenedor
   const modal = document.createElement('div');
   modal.style.position = 'fixed';
   modal.style.zIndex = '1000';
@@ -43,7 +43,7 @@ const mostrarModal = (mensaje, callback) => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  document.body.style.fontFamily = 'Arial, sans-serif'; // Tipografía consistente
+  document.body.style.fontFamily = 'Arial, sans-serif';
 
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    // Rellenar filtro de tipo
+    // Rellenar filtro tipo
     const tiposUnicos = [...new Set(tickets.map(t => t.tipoMensaje))];
     tiposUnicos.forEach(tipo => {
       const option = document.createElement("option");

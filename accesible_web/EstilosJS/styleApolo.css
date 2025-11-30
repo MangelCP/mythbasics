@@ -249,12 +249,12 @@ img:hover {
 }
 
 .boton-container {
-  text-align: center; /* centra el botón */
-  margin: 20px 0;     /* margen superior e inferior */
+  text-align: center;
+  margin: 20px 0;    
 }
 
 .descargar-btn {
-  background-color: #c0a84e; /* mismo color que #BotonSesion */
+  background-color: #c0a84e;
   color: white;
   text-decoration: none;
   padding: 1rem 2rem;

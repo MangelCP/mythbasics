@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================= MODAL EDITAR/BORRAR =====================
   const modal = document.createElement("div");
   modal.className = "modal-editar";
-  modal.style.display = "none"; // oculto al inicio
+  modal.style.display = "none"; // oculto
   modal.innerHTML = `<div class="modal-contenido"></div>`;
   document.body.appendChild(modal);
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modal.style.display = "flex";
 
-    // Evitar sobrescribir otros eventos
+    // Evitar sobrescribir eventos
     const cerrarClickFuera = e => {
       if (e.target === modal) {
         modal.style.display = "none";
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (modalNormas && btnAceptarNormas && btnRegresarNormas && inputContainer) {
     inputContainer.classList.add("bloqueado");
-    modalNormas.style.display = "flex"; // Mostrar modal al cargar
+    modalNormas.style.display = "flex"; // Modal
 
     btnAceptarNormas.addEventListener("click", () => {
       modalNormas.style.display = "none";
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnVolver = document.getElementById("btnVolver");
 
   let mensajes = [];
-  let primeraCarga = true; // scroll al final en la primera carga
+  let primeraCarga = true; 
 
   const formatearHora = timestamp => {
     if (!timestamp) return "--:--";
@@ -120,11 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const alturaNueva = mensajesDiv.scrollHeight;
     if (primeraCarga || scrollAnterior + 50 >= alturaAnterior) {
-      // Primera carga o estaba al final: scroll abajo
+      // Scroll
       mensajesDiv.scrollTop = mensajesDiv.scrollHeight;
       primeraCarga = false;
     } else {
-      // Mantener scroll donde estaba
+      // Mantener scroll 
       mensajesDiv.scrollTop = scrollAnterior;
     }
   };

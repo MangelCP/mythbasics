@@ -123,11 +123,11 @@ table tr:last-child td:last-child {
 
 .filtro {
   display: flex;
-  flex-direction: column; /* label arriba del select */
+  flex-direction: column; 
   gap: 5px;
 }
 
-/* Selects estilizados */
+/* Selects */
 .filtro select {
   padding: 6px 10px;
   border-radius: 6px;

@@ -1,5 +1,5 @@
 body {
-  background-color: #1990a5; /* mismo fondo que tus páginas anteriores */
+  background-color: #1990a5; 
   font-family: 'Georgia', serif;
   color: #333;
   margin: 0;
@@ -12,25 +12,25 @@ body {
 
 /* ======== CONTENEDOR DE REGISTRO ======== */
 .registro-container {
-  background: rgba(243, 236, 216, 0.95); /* tono pergamino translúcido */
+  background: rgba(243, 236, 216, 0.95); 
   border-radius: 20px;
   padding: 40px;
   width: 380px;
   text-align: center;
-  box-shadow: 0 0 25px rgba(178, 142, 2, 0.6); /* sombra dorada */
+  box-shadow: 0 0 25px rgba(178, 142, 2, 0.6); 
   font-family: Heorot, Georgia, serif;
 }
 
 /* ======== ICONO ======== */
 .icono-registro {
   font-size: 3em;
-  color: #b28e02; /* dorado */
+  color: #b28e02;
   margin-bottom: 10px;
 }
 
 /* ======== TITULO ======== */
 .registro-container h1 {
-  color: #b28e02; /* dorado */
+  color: #b28e02;
   margin-bottom: 25px;
   font-size: 1.8em;
   font-family: Heorot, Georgia, serif;
@@ -52,16 +52,16 @@ body {
 .input-group input {
   width: 100%;
   padding: 10px;
-  border: 2px solid #b28e02; /* borde dorado */
+  border: 2px solid #b28e02; 
   border-radius: 8px;
   outline: none;
   font-size: 1em;
-  background-color: #fff7e6; /* color claro */
+  background-color: #fff7e6; 
 }
 
 /* ======== BOTÓN REGISTRAR ======== */
 #BotonRegistrar {
-  background-color: #b28e02; /* dorado */
+  background-color: #b28e02;
   border: none;
   border-radius: 10px;
   padding: 12px 25px;
@@ -76,7 +76,7 @@ body {
 }
 
 #BotonRegistrar:hover {
-  background-color: #e6c863; /* más brillante */
+  background-color: #e6c863;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(178, 142, 2, 0.8);
 }

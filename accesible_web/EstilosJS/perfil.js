@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTexto = document.getElementById("modalTexto");
   const modalBotones = document.getElementById("modalBotones");
 
-  // Modal tipo confirm (se mantiene para otros usos)
+  // Modal tipo confirm (se mantiene otros usos)
   function mostrarConfirm(texto, callbackAceptar, callbackCancelar) {
     modalTexto.textContent = texto;
     modalBotones.innerHTML = `
@@ -38,18 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
  if (!usuarioGuardado) {
   // Mostrar modal
-  modalTexto.textContent = "⚠️ No hay sesión iniciada. Haga click fuera de la ventana para iniciar sesión.";
+  modalTexto.textContent = "No hay sesión iniciada. Haga click fuera de la ventana para iniciar sesión.";
   modal.style.display = "flex";
 
-  // Al hacer clic fuera del modal → redirigir
+  // Redigir con click fuera
   modal.onclick = () => {
     window.location.href = "inicioSesion.html";
   };
 
-  // Evitar que clic dentro del contenido cierre el modal
+  // click dentro, no cierre el modal
   document.querySelector(".modal-contenido").onclick = (e) => e.stopPropagation();
 
-  // Detener ejecución del resto del script
+  // Detener ejecucion
   return;
 }
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnCambiarFoto = document.getElementById("btnCambiarFoto");
   const btnPremium = document.getElementById("btnPremium");
 
-  // Mostrar botón solo si el usuario NO es premium o admin
+  // Mostrar botón si no es premium o admin
   if (usuarioGuardado.rango === "usuario") {
     btnPremium.style.display = "block";
   }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rangoUsuario.textContent = "Rango: premium";
             btnPremium.style.display = "none";
 
-            modalTexto.textContent = "✨ ¡Ahora eres Premium! Disfruta de las nuevas funciones.";
+            modalTexto.textContent = "¡Ahora eres Premium! Disfruta de las nuevas funciones.";
             modalBotones.innerHTML = `<button id="modalBtnAceptar">Aceptar</button>`;
             modal.style.display = "flex";
             document.getElementById("modalBtnAceptar").onclick = () => window.location.reload();
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nombre.textContent = 'Nombre: ' + usuarioGuardado.nombre;
   rangoUsuario.textContent = `Rango: ${usuarioGuardado.rango}`;
 
-  // --- Mostrar botón Tickets si es administrador ---
+  // ---  Tickets administrador ---
   const btnTickets = document.getElementById("btnTickets");
   if (usuarioGuardado.rango === "administrador") {
     btnTickets.style.display = "inline-block";
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- SI NO TENEMOS FOTO GUARDADA EN LOCALSTORAGE ---
+  // --- NO TENEMOS FOTO GUARDADA LOCALSTORAGE ---
   if (!usuarioGuardado.foto) {
     fetch(`http://localhost:3000/api/usuarios/${usuarioGuardado.nick}`)
       .then(res => res.json())
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lector.readAsDataURL(archivo);
   });
 
-  // --- CERRAR SESIÓN ---
+  // --- CERRAR SESION ---
   document.getElementById("btnCerrarSesion").addEventListener("click", () => {
     mostrarConfirm(
       "¿Seguro que deseas cerrar sesión?",

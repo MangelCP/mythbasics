@@ -88,7 +88,7 @@ li.dropdown {
 }
 
 ul#menu li:not(.boton-li) a {
-  padding: 1.5rem; /* Esto mantiene padding entre los links, sin afectar las esquinas */
+  padding: 1.5rem;
 }
 
 /* Botón inicio de sesión */
@@ -128,7 +128,7 @@ ul#menu li:not(.boton-li) a {
   margin: 50px;
 }
 
-/* Estilos de jeroglíficos y contenedores */
+/* Estilos jeroglíficos y contenedores */
 #jeroglificosHum, #aammit, #jeroglificosAnubis, #Duat, #juicio, #aaruyammit {
   display: flex;
   justify-content: center;
@@ -178,7 +178,7 @@ ul#menu li:not(.boton-li) a {
   border: solid black; 
 }
 
-/* ===== Contenedores de imágenes ===== */
+/* ===== Contenedores imágenes ===== */
 #hijosPoseidon,
 #lealtadHades,
 #herculesMitos {
@@ -226,7 +226,7 @@ flex-wrap: wrap;
   border: solid black;
 }
 
-/* Textos debajo de las imágenes */
+/* Textos debajo imágenes */
 strong {
   font-size: 20px;
 }
@@ -238,7 +238,7 @@ h3 {
   text-align: left;
 }
 
-/* 📱 Adaptaciones para pantallas pequeñas */
+/* Responsive */
 @media (max-width: 768px) {
   body { font-size: 16px; margin: 0; padding: 0; }
 

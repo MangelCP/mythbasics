@@ -154,10 +154,10 @@ img:hover {
 .poseidonAnfitrite { width: 700px; height: 400px; margin: 20px auto; }
 #descendenciaPoseidon {
   display: flex;
-  justify-content: center; /* centra horizontalmente todo el bloque */
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* espacio entre imágenes */
-  flex-wrap: nowrap; /* evita que bajen a otra fila */
+  gap: 20px;
+  flex-wrap: nowrap;
   margin: 20px 0;
 }
 
@@ -232,10 +232,10 @@ img:hover {
 /* ======== MITOS DE POSEIDON ======== */
 #mitos_Odisea {
   display: flex;
-  justify-content: center; /* centra el conjunto de imágenes */
-  align-items: flex-start; /* alinea por la parte superior */
-  gap: 20px; /* espacio entre imágenes */
-  flex-wrap: nowrap; /* mantiene las imágenes en una sola fila */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
   margin: 10px 0;
 }
 
@@ -250,17 +250,17 @@ img:hover {
 /* Tamaños específicos para cada imagen */
 #mitos_Odisea img.Odisea {
   width: 600px;
-  height: 600px; /* más cuadrada */
+  height: 600px;
 }
 
 #mitos_Odisea img.Feaceos {
   height: 500px;
-  width: 750px; /* más alta que ancha */
+  width: 750px;
 }
 
 #mitos_Odisea img.Atenas {
   height: 500px;
-  width: 750px; /* más alta que ancha */
+  width: 750px;
 }
 
 #mitos_Odisea img:hover {
@@ -359,7 +359,7 @@ img:hover {
   #menu li { width: 100%; text-align: center; font-size: 1.2rem; }
   #menu li a, .dropbtn { padding: 1rem; height: auto; }
 
-  /* Ajuste para el botón de sesión */
+  /* botón de sesión */
   #menu .boton-li {
     margin-left: 0; 
     margin-right: 0;

@@ -1,6 +1,6 @@
 // ==================== NUEVO: variable global ====================
 let usuarioAEditar = null;
-let accionPendiente = null; // Función que se ejecutará al confirmar
+let accionPendiente = null;
 // ================================================================
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     } catch (err) {
       console.error('Error al cargar usuarios:', err);
-      mostrarModal('❌ No se pudieron cargar los usuarios. Asegúrate de que el servidor esté corriendo.');
+      mostrarModal('No se pudieron cargar los usuarios. Asegúrate de que el servidor esté corriendo.');
     }
   }
 
@@ -142,7 +142,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.cerrarModal = () => {
     document.getElementById('modalEditar').style.display = 'none';
   };
-  // ==================================================================
 
   // ==================== ACCIONES ===========================
   window.borrarUsuario = (nick) => {
@@ -154,7 +153,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         cargarUsuarios();
       } catch (err) {
         console.error(err);
-        mostrarModal('❌ No se pudo borrar el usuario.');
+        mostrarModal('No se pudo borrar el usuario.');
       }
     }, { mostrarCancelar: true });
   };
@@ -165,11 +164,11 @@ window.addEventListener('DOMContentLoaded', async () => {
         const res = await fetch(`http://localhost:3000/api/usuarios/${nick}/admin`, { method: 'PATCH' });
         const data = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(data.error || `Error al nombrar administrador: ${res.status}`);
-        mostrarModal('✅ Usuario ahora es administrador');
+        mostrarModal('Usuario ahora es administrador');
         cargarUsuarios();
       } catch (err) {
         console.error(err);
-        mostrarModal(`❌ No se pudo hacer administrador: ${err.message}`);
+        mostrarModal(`No se pudo hacer administrador: ${err.message}`);
       }
     }, { mostrarCancelar: true });
   };

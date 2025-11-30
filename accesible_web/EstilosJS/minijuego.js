@@ -1,12 +1,11 @@
 import { preguntas } from '../ContenidoExtra/preguntasMinijuego.js';
 
 // --- BLOQUEO DE ACCESO SIN SESION ---
-// --- BLOQUEO DE ACCESO SIN SESION ---
 const usuarioActual = JSON.parse(localStorage.getItem('usuario'));
 
 if (!usuarioActual || !usuarioActual.nick) {
 
-  // Crear fondo del modal
+  // Crear fondo modal
   const modal = document.createElement("div");
   modal.id = "modalInicioSesion";
   modal.style.position = "fixed";
@@ -40,7 +39,7 @@ if (!usuarioActual || !usuarioActual.nick) {
   texto.textContent = "Debes iniciar sesión para acceder al minijuego.";
   texto.style.fontSize = "16px";
 
-  // Botón
+  // Boton
   const boton = document.createElement("button");
   boton.textContent = "Iniciar Sesión";
   boton.style.marginTop = "15px";
@@ -65,7 +64,7 @@ if (!usuarioActual || !usuarioActual.nick) {
   modal.appendChild(contenido);
   document.body.appendChild(modal);
 
-  // Detener ejecución del juego
+  // Detener ejecucion del juego (Para no sesion)
   throw new Error("Bloqueado: usuario no autenticado");
 }
 
@@ -144,7 +143,7 @@ function verificarRespuesta(opcionSeleccionada) {
     indice++;
     mostrarPregunta();
   } else {
-    // si falla, mostrar la correcta y actualizar puntos
+    // si falla, mostrar solucion y actualizar puntos
     mostrarRespuestaCorrecta();
   }
 }
@@ -184,7 +183,7 @@ async function actualizarPuntosUsuario() {
   if (!usuario || !usuario.nick) return;
 
   try {
-    // Enviar Puntuacion; Guardar la mayor
+    // Guardar puntuaje mayor
     const resPatch = await fetch(`http://localhost:3000/api/usuarios/${usuario.nick}/puntos`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -194,7 +193,7 @@ async function actualizarPuntosUsuario() {
     if (!resPatch.ok) throw new Error('Error al actualizar puntos');
     const dataPatch = await resPatch.json();
 
-    // Actualiza localStorage con los puntos actuales 
+    // Actualiza localStorage puntos actuales 
     usuario.puntos = dataPatch.puntosActuales;
     localStorage.setItem('usuario', JSON.stringify(usuario));
     console.log(`Puntos actualizados: ${dataPatch.puntosActuales}`);

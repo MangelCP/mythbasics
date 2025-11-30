@@ -37,7 +37,7 @@ ul {
 li {
   font-weight: bold;
   font-size: 1.5rem;
-  position: relative; /* para posicionar submenu */
+  position: relative;
 }
 
 /* Enlaces principales */
@@ -70,7 +70,7 @@ li.dropdown:hover .dropbtn {
 /* ======== SUBMENÚ ======== */
 .dropdown-content {
   position: absolute;
-  top: 100%; /* justo debajo del li */
+  top: 100%; 
   left: 0;
   background-color: #333;
   min-width: 160px;

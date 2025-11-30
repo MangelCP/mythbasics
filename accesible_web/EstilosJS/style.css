@@ -74,7 +74,7 @@ li.dropdown {
 }
 
 .dropdown-content a:last-child {
-  border-bottom: none; /* quitar borde del último */
+  border-bottom: none; 
 }
 
 .dropdown-content a:hover {
@@ -89,11 +89,11 @@ li.dropdown {
 .dropbtn h1,
 .dropbtn h3 {
   font-size: 1.5rem !important;
-  display: block;  /* ocupa todo el ancho y alto del enlace */
+  display: block;  
   width: 100%;
   margin: 0;
   padding: 0;
-  line-height: 1.5; /* ajustable para que coincida visualmente */
+  line-height: 1.5; 
   color: white !important;
   text-align: center;
 }
@@ -270,7 +270,7 @@ h3 {
 
 /* ==================== ESTILOS MODAL ==================== */
 .modal-editar {
-  display: none; /* oculto por defecto */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -372,6 +372,6 @@ h3 {
 }
 
 #menu .boton-li {
-    margin-left: auto; /* empuja al botón al extremo derecho */
-    margin-right: 2rem; /* pequeño margen derecho */
+    margin-left: auto; 
+    margin-right: 2rem; 
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================= MODAL GLOBAL =====================
   const modal = document.createElement("div");
   modal.className = "modal-editar";
-  modal.style.display = "none"; // oculto por defecto
+  modal.style.display = "none"; // oculto
   modal.innerHTML = `
     <div class="modal-contenido">
       <img id="modalImagen" src="" alt="" style="max-width:100%; border-radius:8px; margin-bottom:10px; display:none;">
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnEnviar = document.getElementById("modalBtnEnviar");
   const btnCancelar = document.getElementById("modalBtnCancelar");
 
-  // Helper para resetear botones/inputs del modal
+  // Helper resetear botones/inputs  modal
   function resetModalUI() {
     modalImagen.style.display = "none";
     modalImagen.src = "";
@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     btnEnviar.style.display = "none";
     btnCancelar.style.display = "none";
 
-    // quitar handlers antiguos (evitar acumulación)
+    // evitar acumulación
     btnAceptar.onclick = null;
     btnEnviar.onclick = null;
     btnCancelar.onclick = null;
   }
 
-  // Mostrar modal genérico (texto simple). Por defecto muestra Aceptar.
+  // Mostrar modal generico (texto simple)
 function mostrarModal(texto, imagen = null, { showAceptar = true } = {}) {
   resetModalUI();
   modalTexto.textContent = texto;
@@ -51,10 +51,10 @@ function mostrarModal(texto, imagen = null, { showAceptar = true } = {}) {
   }
   if (showAceptar) {
     btnAceptar.style.display = "inline-block";
-    // Sobrescribimos el onclick SOLO para este modal
+    // Sobrescribimos onclick SOLO 
     btnAceptar.onclick = () => {
       modal.style.display = "none";
-      // Restauramos el onclick global después
+      // Restauramos onclick global
       btnAceptar.onclick = () => { modal.style.display = "none"; };
     };
   }
@@ -62,7 +62,7 @@ function mostrarModal(texto, imagen = null, { showAceptar = true } = {}) {
 }
 
 
-  // Modal tipo acertijo (input + enviar + cancelar)
+  // Modal acertijo (input + enviar + cancelar)
   function mostrarAcertijo(pregunta, correcta, imagen = null) {
     resetModalUI();
     modalTexto.textContent = pregunta;
@@ -81,15 +81,15 @@ function mostrarModal(texto, imagen = null, { showAceptar = true } = {}) {
       const respuesta = modalInput.value.trim().toLowerCase();
       if (!respuesta) return;
       if (respuesta === String(correcta).toLowerCase()) {
-        // Respuesta correcta: mostramos mensaje de éxito con Aceptar
+        // Respuesta correcta: éxito + Aceptar
         mostrarModal("¡Respuesta correcta!", imagen, { showAceptar: true });
-        // btnAceptar cerrará por defecto el modal (se define abajo)
+        // btnAceptar cerrara el modal
         btnAceptar.onclick = () => { modal.style.display = "none"; };
       } else {
-        // Mostrar opciones para reintentar o cancelar
+        //reintentar o cancelar
         resetModalUI();
         modalTexto.textContent = "Respuesta incorrecta. ¿Quieres intentar de nuevo?";
-        btnAceptar.style.display = "inline-block"; // "Intentar de nuevo"
+        btnAceptar.style.display = "inline-block";
         btnCancelar.style.display = "inline-block";
 
         // Reintentar
@@ -104,10 +104,10 @@ function mostrarModal(texto, imagen = null, { showAceptar = true } = {}) {
     modal.style.display = "flex";
   }
 
-  // Por defecto Aceptar cierra el modal (comportamiento general)
+  // Por defecto Aceptar cierra modal
   btnAceptar.onclick = () => { modal.style.display = "none"; };
 
-  // Cerrar modal si clicas fuera del contenido
+  // Cerrar modal click fuera del contenido
   window.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
   });
@@ -167,7 +167,7 @@ if (loginForm) {
         // Guardar usuario
         localStorage.setItem('usuario', JSON.stringify(data.usuario));
 
-        // Mostrar modal de bienvenida
+        // Modal de bienvenida
         resetModalUI();
         modalTexto.textContent = `${data.mensaje}\nBienvenido ${data.usuario.nombre}`;
         btnAceptar.style.display = "inline-block";
@@ -180,7 +180,7 @@ if (loginForm) {
       .catch(err => {
         document.getElementById('usuario').value = '';
         document.getElementById('password').value = '';
-        // Mostrar modal de error y cerrar solo el modal al aceptar
+        // Mostrar modal de error y cerrar solo modal, aceptar
         resetModalUI();
         modalTexto.textContent = err.message;
         btnAceptar.style.display = "inline-block";
@@ -202,7 +202,7 @@ if (loginForm) {
     botonSesion.addEventListener('click', () => window.location.href = '../ContenidoExtra/perfil.html');
   }
 
-    // Mostrar/ocultar tarjeta Adaptaciones según sesión
+    // Mostrar/ocultar tarjeta Adaptaciones
     const cardAdaptaciones = document.getElementById('cardAdaptaciones');
       const mensajeLogin = document.getElementById('mensajeLogin');
 

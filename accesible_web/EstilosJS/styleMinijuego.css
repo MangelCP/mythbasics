@@ -10,7 +10,7 @@
   color: white !important; 
 }
 ul#menu li:not(.boton-li) a {
-  padding: 1.5rem; /* Esto mantiene padding entre los links, sin afectar las esquinas */
+  padding: 1.5rem; 
 }
 
 #BotonSesion {
@@ -202,7 +202,7 @@ ul#menu li:not(.boton-li) a {
     gap: 10px;               
 }
 
-/* Estilo para el emoji del personaje */
+/* Estilo emoji del personaje */
 #emojiPista {
     font-size: 5rem;
     text-align: center;
@@ -218,7 +218,7 @@ ul#menu li:not(.boton-li) a {
     box-shadow: none !important;
 }
 
-/* Elimina cualquier efecto hover cuando está deshabilitado */
+/* boton deshabilitado */
 #btnEnviarIcono:disabled:hover {
     background-color: gray !important;
     box-shadow: none !important;
@@ -287,7 +287,7 @@ ul#menu li:not(.boton-li) a {
 }
 
 
-/* Estilo para botones de Enviar y Reiniciar */
+/* botones de Enviar y Reiniciar */
 #submit-btn,
 #reiniciar-btn {
   background-color: #c0a84e;
@@ -334,16 +334,16 @@ ul#menu li:not(.boton-li) a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
-/* Cambio de borde al enfocar */
+/* enfoque */
 #respuesta-input:focus {
-  border-color: #ff9800;       /* Borde naranja */
-  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3); /* Sombra naranja suave */
+  border-color: #ff9800;      
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3); 
 }
 
-/* Placeholder más elegante */
+/* Placeholder */
 #respuesta-input::placeholder {
-  color: #999;                /* Gris suave */
-  font-style: italic;          /* Itálico */
+  color: #999;                
+  font-style: italic;          
 }
 
 .autocomplete-items {
@@ -351,7 +351,7 @@ ul#menu li:not(.boton-li) a {
   border: 1px solid #ccc;
   border-top: none;
   z-index: 99;
-  top: 100%; /* justo debajo del input */
+  top: 100%; 
   left: 0;
   right: 0;
   max-height: 200px;
