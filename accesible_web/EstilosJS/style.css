@@ -327,6 +327,37 @@ h3 {
 #modalBotones button:hover {
   background-color: #ffaa00;
 }
+/* Contenedor del mensaje de login */
+#mensajeLogin {
+  margin-top: 25px;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #8b0000, #b22222, #ff4500);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 100, 100, 0.7);
+  display: none; /* Se muestra solo si el usuario no ha iniciado sesión */
+  max-width: 350px;
+  text-align: center;
+  animation: parpadeo 1.5s infinite ease-in-out;
+}
+
+/* Animación de pulso */
+@keyframes parpadeo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 @keyframes modalAppear {
   from { transform: scale(0.8); opacity: 0; }
