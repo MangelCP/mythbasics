@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
-  // Crear contenedor de modal dinámicamente
+  // Crear contenedor de modal
   const modal = document.createElement("div");
   modal.id = "modalMensaje";
   modal.style.display = "none";
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
   });
 
-  // Cerrar modal al hacer click fuera del contenido
+  // Cerrar modal con click fuera
   window.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
   });

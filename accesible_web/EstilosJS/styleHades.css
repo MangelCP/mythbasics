@@ -135,7 +135,7 @@ li.dropdown:hover > .dropdown-content {
 
 /* ======== CONTENIDO PRINCIPAL ======== */
 #ContenidoHades {
-  margin: 120px 50px 50px; /* margen top más grande para que no quede detrás del menú fijo */
+  margin: 120px 50px 50px;
   text-align: left;
 }
 
@@ -159,14 +159,13 @@ img:hover {
   box-shadow: 0 0 30px rgba(178, 142, 2, 1);
 }
 
-/* Ajustes específicos de imágenes de Hades */
+/* Ajustes imágenes Hades */
 .estatua, .casco, .bidente, .inframundo, .heraclesMito, .teseoMito, .sisifoMito, .hadesypersefona, .disney {
   width: 90%;
   max-width: 500px;
   height: auto;
 }
 
-/* Familia de Hades */
 .HadesFamily {
   display: flex;
   justify-content: center;
@@ -208,7 +207,6 @@ img:hover {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Contenedor de mitos de Hades */
 #mito_Hades {
   display: flex;
   justify-content: center;

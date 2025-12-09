@@ -16,7 +16,7 @@ nav.navbar {
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  position: relative; /* para el botón */
+  position: relative;
 }
 
 ul {
@@ -25,16 +25,16 @@ ul {
   padding: 0;
   display: flex;
   align-items: center;
-  flex: 1; /* ocupa todo el espacio disponible */
-  overflow: visible; /* submenú no se corta */
+  flex: 1; 
+  overflow: visible;
 }
 
 li {
   font-weight: bold;
   font-size: 1.5rem;
   display: flex;
-  align-items: center; /* alinea verticalmente */
-  position: relative; /* necesario para submenú */
+  align-items: center;
+  position: relative;
 }
 
 li a,
@@ -46,7 +46,7 @@ li a,
   text-align: center;
   padding: 1.5rem;
   text-decoration: none;
-  line-height: 1.2; /* nivelar palabras */
+  line-height: 1.2; 
 }
 
 li a:hover,
@@ -74,7 +74,7 @@ li.dropdown {
 .dropdown-content {
   display: block;
   position: absolute;
-  top: 100%; /* justo debajo del li */
+  top: 100%;
   left: 0;
   background-color: #333;
   min-width: 180px;

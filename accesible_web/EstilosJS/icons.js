@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 /***********************************
- *   DETECCIÓN DEL MODO DESDE URL
+ *   DETECCIÓN DEL MODO
  ***********************************/
 const parametros = new URLSearchParams(window.location.search);
-let modoActual = parametros.get("modo") || "practica"; // práctica, diario o normal
+let modoActual = parametros.get("modo") || "practica"; 
 let nivel = parametros.get("nivel") || "facil";
 
 /***********************************
- *    BLOQUEO SIN SESIÓN INICIADA
+ *    BLOQUEO SIN SESION INICIADA
  ***********************************/
 const usuarioActual = JSON.parse(localStorage.getItem("usuario"));
 
@@ -34,7 +34,7 @@ const nivelTitulo = document.querySelector("#nivelTitulo");
 const btnVolver = document.querySelector("#btnVolverMinijuegos");
 
 /***********************************
- *    MODAL DE SESIÓN
+ *    MODAL DE SESION
  ***********************************/
 function mostrarModalSesion() {
     const modal = document.createElement("div");
@@ -104,7 +104,7 @@ async function cargarPersonajes() {
 }
 
 /***********************************
- *    ANIMACIÓN DE EMOJIS
+ *    ANIMACION DE EMOJIS
  ***********************************/
 function animarEmoji() {
     const emojis = emojiDiv.textContent.split(" ");
@@ -149,16 +149,16 @@ function elegirPersonaje() {
 
     personajeObjetivo = lista[new Date().getDate() % lista.length];
 
-    // SI YA SE COMPLETÓ HOY → bloquear input
+    // SI YA SE HIZO → bloquear input
     if (estado.fecha === dia && estado.completado) {
     input.disabled = true;
     submitBtn.disabled = true;
 
-    // Mostrar emojis del personaje diario
+    // Mostrar emojis personaje diario
     emojiDiv.textContent = personajeObjetivo.emojis[0];
     animarEmoji();
 
-    // ABRIR AUTOMÁTICAMENTE EL MODAL AL VOLVER A LA PÁGINA
+    // ABRIR EL MODAL AL VOLVER 
     setTimeout(() => {
         mostrarModalPersonaje(personajeObjetivo);
     }, 500);
@@ -166,7 +166,7 @@ function elegirPersonaje() {
     return;
 }
 
-    // SI NO SE HA COMPLETADO HOY → permitir jugar normalmente
+    // SI NO SE HA COMPLETADO HOY → jugar  (POR SI SALEN Y ENTRAN DE NUEVO, ME HA PASADO)
     input.disabled = false;
     submitBtn.disabled = false;
     feedbackDiv.innerHTML = "<strong>🎯 Adivina el personaje diario:</strong>";
@@ -176,7 +176,7 @@ function elegirPersonaje() {
 }
 
 
-    // Modo normal/práctica
+    // Modo normal/practica
     let disponibles = lista.filter(p => !intentados.includes(normalizarTexto(p.nombre)));
     personajeObjetivo = disponibles[Math.floor(Math.random() * disponibles.length)];
 
@@ -190,7 +190,7 @@ function elegirPersonaje() {
 }
 
 /***********************************
- *    NORMALIZAR TEXTO
+ *    NORMALIZAR TEXTO (PARA EVITAR PROBLEMAS, ME PASÓ Y DA RABIA JAJAJA)
  ***********************************/
 function normalizarTexto(txt) {
     return txt.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -207,14 +207,14 @@ function agregarIntento(nombreIngresado) {
 
     if (!personaje) {
         feedbackDiv.style.color = "red";
-        feedbackDiv.textContent = `❌ El personaje "${nombreIngresado}" no está en la lista.`;
+        feedbackDiv.textContent = `El personaje "${nombreIngresado}" no está en la lista.`;
         input.value = "";
         return;
     }
 
     if (intentados.includes(nombreNorm)) {
         feedbackDiv.style.color = "red";
-        feedbackDiv.textContent = `⚠️ Ya intentaste ${personaje.nombre}.`;
+        feedbackDiv.textContent = `Ya intentaste ${personaje.nombre}.`;
         input.value = "";
         return;
     }
@@ -230,7 +230,7 @@ function agregarIntento(nombreIngresado) {
         mostrarModalPersonaje(personajeObjetivo);
     } else {
         feedbackDiv.style.color = "red";
-        feedbackDiv.textContent = "❌ Incorrecto, prueba otra vez";
+        feedbackDiv.textContent = "Incorrecto, prueba otra vez";
 
         if (errores < personajeObjetivo.emojis.length - 1) {
             errores++;
@@ -260,7 +260,7 @@ function mostrarModalPersonaje(personaje) {
         zIndex: "9999"
     });
 
-    // Evitar que se cierre al hacer clic fuera
+    // Evitar que se cierre con clic fuera
     modal.addEventListener("click", e => e.stopPropagation());
 
     const contenido = document.createElement("div");
@@ -299,7 +299,7 @@ function mostrarModalPersonaje(personaje) {
         emojis.style.transform = "scale(1)";
     }, 50);
 
-    // Botón SOLO para volver a minijuegos en modo diario
+    // Botón para volver en diario
     const btnVolver = document.createElement("button");
     btnVolver.textContent = "Volver a Minijuegos";
     Object.assign(btnVolver.style, {
@@ -318,7 +318,7 @@ function mostrarModalPersonaje(personaje) {
     contenido.appendChild(emojis);
     contenido.appendChild(btnVolver);
 
-    // En modo normal → añadir botón para volver a jugar
+    // En modo practica → boton volver a jugar
     if (modoActual !== "diario") {
         const btnReiniciar = document.createElement("button");
         btnReiniciar.textContent = "Volver a Jugar";
@@ -341,7 +341,7 @@ function mostrarModalPersonaje(personaje) {
     modal.appendChild(contenido);
     document.body.appendChild(modal);
 
-    // BLOQUEAR INPUT Y BOTÓN EN MODO DIARIO
+    // BLOQUEAR INPUT Y BOTON MODO DIARIO
     if (modoActual === "diario") {
         input.disabled = true;
         submitBtn.disabled = true;

@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnAceptar.onclick = () => modal.style.display = "none";
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
-  // ============================================
+
 
   const inputNombre = document.getElementById("inputNombre");
   const inputCorreo = document.getElementById("inputCorreo");
@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.error) {
         mostrarModal(data.error);
       } else {
-        // Actualizamos localStorage con los nuevos datos
+        // Actualizo localStorage 
         if (datos.nombre) usuarioGuardado.nombre = datos.nombre;
         if (datos.correo) usuarioGuardado.correo = datos.correo;
         localStorage.setItem("usuario", JSON.stringify(usuarioGuardado));
 
         mostrarModal("Cambios guardados correctamente");
 
-        // Limpiar contraseña
+        // Limpiar password
         inputContrasena.value = '';
       }
     })

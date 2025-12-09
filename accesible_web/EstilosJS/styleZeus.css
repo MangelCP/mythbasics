@@ -19,7 +19,7 @@ body {
 /* ======== MENÚ ======== */
 #menu {
   display: flex;
-  justify-content: space-between; /* links a la izquierda, botón a la derecha */
+  justify-content: space-between;
   align-items: center;
   background-color: #333;
   height: 80px;
@@ -79,7 +79,7 @@ li.dropdown {
   display: inline-block;
 }
 
-/* Botón de sesión alineado a la derecha */
+/* Botón sesión alineado */
 #menu .boton-li {
   margin-left: auto; 
 }

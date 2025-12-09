@@ -88,7 +88,7 @@ li.dropdown {
 }
 
 ul#menu li:not(.boton-li) a {
-  padding: 1.5rem; /* Esto mantiene padding entre los links, sin afectar las esquinas */
+  padding: 1.5rem;
 }
 
 
@@ -157,19 +157,19 @@ label::after {
 
 /* ======== ESTILOS FORMULARIO CONTACTO ======== */
 form {
-  max-width: 600px;   /* Antes 400px */
+  max-width: 600px;   
   margin: 0 auto;
   border-radius: 20px;
 }
 
 fieldset {
   border-radius: 20px;
-  padding: 30px;       /* Antes 20px */
+  padding: 30px;       
   border: 1px solid #ccc;
 }
 
 legend {
-  font-size: 22px;     /* Antes 20px */
+  font-size: 22px;     
   color: #333;
   font-weight: bold;
 }
@@ -177,7 +177,7 @@ legend {
 /* Estilos para los campos de entrada, textarea y select */
 input, textarea, select {
   margin-bottom: 18px;
-  padding: 12px;       /* Antes 8px */
+  padding: 12px;      
   width: 100%;
   box-sizing: border-box;
   border-radius: 12px;
@@ -191,8 +191,8 @@ button#envio {
   color: #fff;
   cursor: pointer;
   border: none;
-  padding: 12px 20px;  /* Antes 10px */
-  font-size: 18px;     /* Antes 16px */
+  padding: 12px 20px;  
+  font-size: 18px;     
   font-weight: bold;
   border-radius: 20px;
   border: solid black;

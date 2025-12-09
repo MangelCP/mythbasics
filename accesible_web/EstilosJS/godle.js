@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 /***********************************
- *   DETECCIÓN DEL MODO DESDE URL
+ *   DETECCIÓN DEL MODO
  ***********************************/
 const parametros = new URLSearchParams(window.location.search);
 let modoActual = parametros.get("modo") || "practica"; // práctica o diario
@@ -39,7 +39,7 @@ if (!usuarioActual || !usuarioActual.nick) {
     });
 
     const titulo = document.createElement("h2");
-    titulo.textContent = "⚠️ Acceso restringido";
+    titulo.textContent = "Acceso restringido";
 
     const texto = document.createElement("p");
     texto.textContent = "Debes iniciar sesión para acceder al minijuego.";
@@ -87,7 +87,7 @@ const input = document.querySelector("#respuesta-input");
 const datalist = document.querySelector("#personajes-list");
 const submitBtn = document.querySelector("#submit-btn");
 const reiniciarBtn = document.createElement("button");
-const volverBtn = document.createElement("button"); // botón "Volver a minijuegos"
+const volverBtn = document.createElement("button");
 
 /***********************************
  *    CARGA DE PERSONAJES DESDE JSON
@@ -105,7 +105,7 @@ async function cargarPersonajes() {
 }
 
 /***********************************
- *   MODO DIARIO — RANDOM MEJORADO
+ *   MODO DIARIO — RANDOM
  ***********************************/
 function getDailyRandomIndex(max) {
     const fecha = new Date();
@@ -127,7 +127,7 @@ function setEstadoDiario(data) {
 }
 
 /***********************************
- *    INICIO DEL JUEGO SEGÚN MODO
+ *    INICIO DEL JUEGO
  ***********************************/
 function iniciarJuego() {
     if (modoActual === "practica") {
@@ -139,13 +139,13 @@ function iniciarJuego() {
         const hoy = new Date().toDateString();
         const estado = getEstadoDiario();
 
-        // ⚠️ Si ya se completó hoy
+        // Si ya se completo hoy
         if (estado.fecha === hoy && estado.completado) {
             feedbackDiv.innerHTML = `<strong>🎉 Ya adivinaste al personaje del día.</strong>`;
             submitBtn.disabled = true;
             input.disabled = true;
 
-            // Mostrar el personaje diario en la tabla automáticamente
+            // Mostrar personaje diario en tabla
             agregarFilaResultadoDiario(personajeObjetivo);
 
             // Lanzar modal
@@ -165,7 +165,7 @@ function agregarFilaResultadoDiario(personaje) {
     columnas.forEach(col => {
         const td = document.createElement("td");
         td.textContent = personaje[col];
-        td.className = "correcto"; // todo correcto porque acertó
+        td.className = "correcto"; // acierto 
         tr.appendChild(td);
     });
 
@@ -191,7 +191,7 @@ function mostrarModalPersonaje(personaje) {
         zIndex: "99999"
     });
 
-    // Evitar cerrar modal haciendo clic fuera
+    // Evitar cerrar modal con clic fuera
     modalFondo.addEventListener("click", e => e.stopPropagation());
 
     const modalContenido = document.createElement("div");
@@ -217,7 +217,7 @@ function mostrarModalPersonaje(personaje) {
     titulo.style.color = "#d8ae22ff";
     modalContenido.appendChild(titulo);
 
-    // BOTÓN REINICIAR (solo en modo practica)
+    // BOTÓN REINICIAR (modo practica)
     if (modoActual === "practica") {
         const reiniciarBtn = document.createElement("button"); 
         reiniciarBtn.textContent = "Reiniciar Juego";
@@ -245,7 +245,7 @@ function mostrarModalPersonaje(personaje) {
     }
 
     // BOTÓN VOLVER A MINIJUEGOS
-    const volverBtn = document.createElement("button"); // crear botón local
+    const volverBtn = document.createElement("button"); 
     volverBtn.textContent = "Volver a Minijuegos";
     Object.assign(volverBtn.style, {
         marginTop: "15px",
@@ -258,7 +258,7 @@ function mostrarModalPersonaje(personaje) {
         cursor: "pointer"
     });
     volverBtn.onclick = () => {
-        window.location.href = "../ContenidoExtra/minijuegos.html"; // ruta al listado de minijuegos
+        window.location.href = "../ContenidoExtra/minijuegos.html";
     };
     modalContenido.appendChild(volverBtn);
 
@@ -317,7 +317,7 @@ function agregarIntento(nombreIngresado) {
 
     tablaBody.appendChild(tr);
 
-    // Esperar a que termine la animación de la tabla (6 columnas × 400ms = 2400ms)
+    // Tiempo Animacion tabla (6 columnas × 400ms = 2400ms)
 setTimeout(() => {
     
     // Correcto

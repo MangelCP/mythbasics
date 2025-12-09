@@ -71,12 +71,12 @@
   transform: scale(1.03);
 }
 
-/* ===== FORMULARIO DE AJUSTES (DISEÑO NUEVO) ===== */
+/* ===== FORMULARIO DE AJUSTES ===== */
 #formAjustes {
   width: 80%;
   max-width: 600px;
   margin: 40px auto;
-  background: #f9f4e8; /* color claro estilo papiro */
+  background: #f9f4e8; 
   padding: 25px;
   border-radius: 18px;
   border: 2px solid goldenrod;
@@ -89,14 +89,14 @@
   text-align: left;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #8a6e00; /* dorado oscuro elegante */
+  color: #8a6e00; 
   margin-top: 20px;
   margin-bottom: 6px;
 }
 
 /* Inputs */
 #formAjustes input {
-  width: 92%; /* <= deja margen a la derecha */
+  width: 92%; 
   padding: 12px;
   font-size: 1rem;
   border: 2px solid #d4b34c;
@@ -124,7 +124,7 @@
 #nombreUsuario,  #rangoUsuario, #nombre{
   font-size: 1.8rem;
   margin-top: 10px;
-  color: #d4b34c; /* dorado suave */
+  color: #d4b34c;
   text-shadow: 0 0 6px rgba(212, 179, 76, 0.5);
 }
 

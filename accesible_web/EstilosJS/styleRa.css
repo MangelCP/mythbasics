@@ -31,14 +31,14 @@ ul {
   align-items: center;
   justify-content: flex-start;
   background-color: #333;
-  overflow: visible; /* necesario para que se vea el submenu */
+  overflow: visible; 
 }
 
 /* Items de menú */
 li {
   font-weight: bold;
   font-size: 1.5rem;
-  position: relative; /* para posicionar submenu */
+  position: relative; 
 }
 
 /* Enlaces principales */
@@ -71,7 +71,7 @@ li.dropdown:hover .dropbtn {
 /* ======== SUBMENÚ CON ANIMACIÓN ======== */
 .dropdown-content {
   position: absolute;
-  top: 100%; /* justo debajo del li */
+  top: 100%;
   left: 0;
   background-color: #333;
   min-width: 160px;
