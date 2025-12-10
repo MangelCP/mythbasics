@@ -31,7 +31,7 @@ if (!usuarioActual || !usuarioActual.nick) {
 
   // Título
   const titulo = document.createElement("h2");
-  titulo.textContent = "⚠️ Acceso restringido";
+  titulo.textContent = "Acceso restringido";
   titulo.style.marginBottom = "10px";
 
   // Texto
