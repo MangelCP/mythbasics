@@ -233,34 +233,21 @@ img:hover {
 #mitos_Odisea {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   flex-wrap: nowrap;
   margin: 10px 0;
 }
 
+
 #mitos_Odisea img {
+  width: 500px;       
+  height: 320px;      
+  object-fit: cover;  
   border-radius: 20px;
   border: 5px solid #b28e02;
   box-shadow: 0 0 20px rgba(178, 142, 2, 0.8);
-  object-fit: cover;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Tamaños específicos para cada imagen */
-#mitos_Odisea img.Odisea {
-  width: 600px;
-  height: 600px;
-}
-
-#mitos_Odisea img.Feaceos {
-  height: 500px;
-  width: 750px;
-}
-
-#mitos_Odisea img.Atenas {
-  height: 500px;
-  width: 750px;
 }
 
 #mitos_Odisea img:hover {
