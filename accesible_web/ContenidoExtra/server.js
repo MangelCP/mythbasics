@@ -472,7 +472,7 @@ app.patch('/api/contacto/:id/estado', (req, res) => {
   const { nick } = req.query;
 
   if (!nick) return res.status(400).json({ ok: false, error: "Falta el nick del usuario" });
-  if (!estado || !['No revisado', 'En proceso', 'Revisado'].includes(estado)) {
+  if (!estado || !['No revisado', 'En proceso', 'Revisado', 'Cerrado'].includes(estado)) {
     return res.status(400).json({ ok: false, error: "Estado inválido" });
   }
 

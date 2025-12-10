@@ -1,6 +1,5 @@
 // --- mostrar modal ---
 const mostrarModal = (mensaje, callback) => {
-  // Crear contenedor
   const modal = document.createElement('div');
   modal.style.position = 'fixed';
   modal.style.zIndex = '1000';
@@ -14,7 +13,6 @@ const mostrarModal = (mensaje, callback) => {
   modal.style.justifyContent = 'center';
   modal.style.fontFamily = 'Arial, sans-serif';
 
-  // Crear contenido
   const contenido = document.createElement('div');
   contenido.style.backgroundColor = '#fff';
   contenido.style.padding = '20px';
@@ -23,7 +21,6 @@ const mostrarModal = (mensaje, callback) => {
   contenido.style.textAlign = 'center';
   contenido.textContent = mensaje;
 
-  // Botón cerrar
   const btnCerrar = document.createElement('button');
   btnCerrar.textContent = 'Cerrar';
   btnCerrar.style.marginTop = '15px';
@@ -124,19 +121,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (!ticketId) return;
 
       let opciones = '';
-      if (ticket.estado === 'No revisado') {
-        opciones = `<option value="No revisado" selected disabled>No revisado</option>
-                    <option value="En proceso">En proceso</option>`;
-      } else if (ticket.estado === 'En proceso') {
-        if (ticket.tipoMensaje === 'sugerencia' || ticket.tipoMensaje === 'apoyo') {
-          opciones = `<option value="En proceso" selected disabled>En proceso</option>
-                      <option value="Revisado">Revisado</option>`;
-        } else {
-          opciones = `<option value="En proceso" selected disabled>En proceso</option>
-                      <option value="Cerrado">Cerrado</option>`;
-        }
-      } else {
-        opciones = `<option value="${ticket.estado}" selected disabled>${ticket.estado}</option>`;
+      switch(ticket.estado) {
+        case 'No revisado':
+          opciones = `<option value="No revisado" selected disabled>No revisado</option>
+                      <option value="En proceso">En proceso</option>`;
+          break;
+        case 'En proceso':
+          if(ticket.tipoMensaje === 'sugerencia' || ticket.tipoMensaje === 'apoyo') {
+            opciones = `<option value="En proceso" selected disabled>En proceso</option>
+                        <option value="Revisado">Revisado</option>`;
+          } else {
+            opciones = `<option value="En proceso" selected disabled>En proceso</option>
+                        <option value="Cerrado">Cerrado</option>`;
+          }
+          break;
+        case 'Revisado':
+          opciones = `<option value="Revisado" selected disabled>Revisado</option>`;
+          break;
+        case 'Cerrado':
+          opciones = `<option value="Cerrado" selected disabled>Cerrado</option>`;
+          break;
+        default:
+          opciones = `<option value="${ticket.estado}" selected disabled>${ticket.estado}</option>`;
       }
 
       const tr = document.createElement("tr");
@@ -196,9 +202,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || "No se pudo actualizar el estado.");
 
-        tickets = tickets.map(t => t.id === id ? { ...t, estado: nuevoEstado } : t);
+        //  Actualizar ticket
+        tickets = tickets.map(t => t.id == id ? { ...t, estado: nuevoEstado } : t);
         pintarTickets();
-        location.reload();
       } catch (err) {
         console.error("Error al actualizar estado:", err);
         mostrarModal("Error al actualizar el estado del ticket");
