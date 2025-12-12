@@ -172,7 +172,6 @@ window.addEventListener('DOMContentLoaded', async () => {
       }
     }, { mostrarCancelar: true });
   };
-  // ==================================================================
 
   window.refrescarTablaUsuarios = cargarUsuarios;
 
