@@ -106,7 +106,7 @@ export const preguntas = shuffleArray([
   { texto: "¿Quién era la diosa de la agricultura en Grecia?", opciones: ["Deméter","Hera","Atenea","Artemisa"], respuesta: "Deméter" },
   { texto: "¿Quién era el dios egipcio de la escritura y la sabiduría?", opciones: ["Thoth","Ra","Anubis","Osiris"], respuesta: "Thoth" },
   { texto: "¿Cuál era el animal sagrado de Bastet?", opciones: ["Gato","Perro","Toro","Halcón"], respuesta: "Gato" },
-  { texto: "¿Qué dios nórdico renació tras Ragnarök?", opciones: ["Balder","Odin","Thor","Loki"], respuesta: "Baldr" },
+  { texto: "¿Qué dios nórdico renació tras Ragnarök?", opciones: ["Balder","Odin","Thor","Loki"], respuesta: "Balder" },
   { texto: "¿Qué titán fue condenado a sostener el cielo?", opciones: ["Atlas","Prometeo","Cronos","Hiperión"], respuesta: "Atlas" },
   { texto: "¿Quién era el dios griego del comercio y el robo?", opciones: ["Hermes","Apolo","Ares","Dionisio"], respuesta: "Hermes" },
   { texto: "¿Quién era la diosa griega del matrimonio?", opciones: ["Hera","Afrodita","Artemisa","Atenea"], respuesta: "Hera" },
