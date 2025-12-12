@@ -57,12 +57,11 @@ document.getElementById('registroForm').addEventListener('submit', async functio
   function mostrarMensajeFinal(texto, exito) {
     mensajeRegistro.textContent = texto;
     mensajeRegistro.style.display = "block";
-
     mensajeRegistro.classList.remove("mensaje-exito", "mensaje-error");
     mensajeRegistro.classList.add(exito ? "mensaje-exito" : "mensaje-error");
   }
 
-  // ---------- VALIDAR CAMPOS ----------
+  // ---------- VALIDACIONES TEXTOS ----------
   if (!validarNombre(nombre)) {
     mostrarError('errorNombre', 'El nombre solo puede tener letras y espacios.');
     nombreInput.focus();
@@ -93,15 +92,8 @@ document.getElementById('registroForm').addEventListener('submit', async functio
     return;
   }
 
-  // ---------- ENVIAR AL SERVIDOR ----------
-  const payload = {
-    nombre,
-    nick,
-    correo,
-    contrasena,
-    rango: 'usuario'
-  };
-
+  // ---------- ENVIAR SERVIDOR ----------
+  const payload = { nombre, nick, correo, contrasena, rango: 'usuario' };
   submitBtn.disabled = true;
   submitBtn.textContent = 'Registrando...';
 
@@ -112,14 +104,24 @@ document.getElementById('registroForm').addEventListener('submit', async functio
       body: JSON.stringify(payload)
     });
 
+    const msg = await res.text();
+
     if (!res.ok) {
-      let msg = await res.text();
-      mostrarMensajeFinal(msg || 'Error al crear la cuenta', false);
+      // COINCIDENCIAS
+      if (msg === "correo_existente") {
+        mostrarError('errorCorreo', 'Este correo ya tiene una cuenta registrada.');
+        correoInput.focus();
+      } else if (msg === "nick_existente") {
+        mostrarError('errorUsuario', 'Este nombre de usuario ya está en uso.');
+        nickInput.focus();
+      } else {
+        mostrarMensajeFinal(msg || "Error al crear la cuenta", false);
+      }
       return;
     }
 
+    // ---------- REGISTRO ----------
     mostrarMensajeFinal('Cuenta creada correctamente. Redirigiendo...', true);
-
     setTimeout(() => {
       window.location.href = '../ContenidoExtra/inicioSesion.html';
     }, 1000);

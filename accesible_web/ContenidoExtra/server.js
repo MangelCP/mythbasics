@@ -38,14 +38,35 @@ db.connect(err => {
 // ---------------- REGISTRO ----------------
 app.post('/registro', (req, res) => {
   const { nombre, nick, correo, contrasena } = req.body;
-  if (!nombre || !nick || !correo || !contrasena) return res.status(400).send('Faltan datos');
+  if (!nombre || !nick || !correo || !contrasena)
+    return res.status(400).send('Faltan datos');
 
-  const sql = 'INSERT INTO usuarios (nombre, nick, correo, contrasena, rango, puntos) VALUES (?, ?, ?, ?, ?, ?)';
-  db.query(sql, [nombre, nick, correo, contrasena, 'usuario', 0], (err) => {
-    if (err) return res.status(500).send('Error en el servidor');
-    res.status(200).send('Usuario registrado');
+  // correo ya existe
+  db.query("SELECT * FROM usuarios WHERE correo = ?", [correo], (err, resultCorreo) => {
+    if (err) return res.status(500).send("Error en la base de datos");
+
+    if (resultCorreo.length > 0)
+      return res.status(400).send("correo_existente");
+
+    // nick ya existe
+    db.query("SELECT * FROM usuarios WHERE nick = ?", [nick], (err, resultNick) => {
+      if (err) return res.status(500).send("Error en la base de datos");
+
+      if (resultNick.length > 0)
+        return res.status(400).send("nick_existente");
+
+      // Registrar usuario
+      const sql = 'INSERT INTO usuarios (nombre, nick, correo, contrasena, rango, puntos) VALUES (?, ?, ?, ?, ?, ?)';
+      db.query(sql, [nombre, nick, correo, contrasena, 'usuario', 0], (err) => {
+        if (err) return res.status(500).send("Error al registrar");
+
+        res.status(200).send("ok");
+      });
+    });
   });
 });
+
+
 
 // ---------------- LOGIN ----------------
 app.post('/login', (req, res) => {
