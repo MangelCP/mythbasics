@@ -95,3 +95,49 @@ body {
 .extra-links a:hover {
   text-decoration: underline;
 }
+
+/* ======== MODAL REGISTRO ======== */
+.modal-oculto {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(25, 144, 165, 0.7); 
+  z-index:1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: rgba(243, 236, 216, 0.97); 
+  border: 3px solid #b28e02; 
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(178, 142, 2, 0.7);
+  font-family: Heorot, Georgia, serif;
+  animation: modalAparece 0.5s ease;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 1rem;
+  color: #b28e02;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.modal-contenido p {
+  color: #333; 
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+
+@keyframes modalAparece {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+

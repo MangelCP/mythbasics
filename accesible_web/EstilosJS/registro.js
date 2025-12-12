@@ -8,7 +8,10 @@ document.getElementById('registroForm').addEventListener('submit', async functio
   const passInput = document.getElementById('password');
   const confirmarInput = document.getElementById('confirmar');
   const submitBtn = this.querySelector('button[type="submit"]');
-  const mensajeRegistro = document.getElementById('mensajeRegistro');
+
+  // Modal elementos
+  const modal = document.getElementById('modalRegistro');
+  const modalPuntos = document.getElementById('modalPuntos');
 
   const nombre = nombreInput.value.trim();
   const nick = nickInput.value.trim();
@@ -54,14 +57,7 @@ document.getElementById('registroForm').addEventListener('submit', async functio
     });
   }
 
-  function mostrarMensajeFinal(texto, exito) {
-    mensajeRegistro.textContent = texto;
-    mensajeRegistro.style.display = "block";
-    mensajeRegistro.classList.remove("mensaje-exito", "mensaje-error");
-    mensajeRegistro.classList.add(exito ? "mensaje-exito" : "mensaje-error");
-  }
-
-  // ---------- VALIDACIONES TEXTOS ----------
+  // ---------- VALIDACIONES LOCALES ----------
   if (!validarNombre(nombre)) {
     mostrarError('errorNombre', 'El nombre solo puede tener letras y espacios.');
     nombreInput.focus();
@@ -115,20 +111,29 @@ document.getElementById('registroForm').addEventListener('submit', async functio
         mostrarError('errorUsuario', 'Este nombre de usuario ya está en uso.');
         nickInput.focus();
       } else {
-        mostrarMensajeFinal(msg || "Error al crear la cuenta", false);
+        alert(msg || "Error al crear la cuenta");
       }
       return;
     }
 
-    // ---------- REGISTRO ----------
-    mostrarMensajeFinal('Cuenta creada correctamente. Redirigiendo...', true);
+    // ---------- REGISTRO EXITOSO CON MODAL ----------
+    let puntos = 0;
+    modal.style.display = "flex"; // mostrar modal
+    modalPuntos.textContent = '';
+
+    const intervalo = setInterval(() => {
+      puntos = (puntos + 1) % 4; // 0,1,2,3
+      modalPuntos.textContent = '.'.repeat(puntos);
+    }, 500);
+
     setTimeout(() => {
+      clearInterval(intervalo);
       window.location.href = '../ContenidoExtra/inicioSesion.html';
-    }, 1000);
+    }, 3000); 
 
   } catch (err) {
     console.error('Error:', err);
-    mostrarMensajeFinal(err.message, false);
+    alert(err.message);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Registrarse';
