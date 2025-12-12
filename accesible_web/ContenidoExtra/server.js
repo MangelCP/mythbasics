@@ -35,7 +35,6 @@ db.connect(err => {
   else console.log('Conectado correctamente a MySQL');
 });
 
-// ---------------- REGISTRO ----------------
 app.post('/registro', (req, res) => {
   const { nombre, nick, correo, contrasena } = req.body;
   if (!nombre || !nick || !correo || !contrasena)
@@ -60,12 +59,34 @@ app.post('/registro', (req, res) => {
       db.query(sql, [nombre, nick, correo, contrasena, 'usuario', 0], (err) => {
         if (err) return res.status(500).send("Error al registrar");
 
+        // ----- Enviar correo de bienvenida -----
+        const mailOptions = {
+          from: '"MythBasics" <mythbasics@gmail.com>',
+          to: correo,
+          subject: '¡Bienvenido a MythBasics!',
+          html: `
+            <h2>¡Hola ${nombre}!</h2>
+            <p>Gracias por crear tu cuenta en nuestra plataforma.</p>
+            <p>Tu usuario es: <strong>${nick}</strong></p>
+            <p>¡Esperamos que disfrutes usando nuestra aplicación!</p>
+          `
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+            console.error('Error al enviar correo de bienvenida:', error);
+
+          } else {
+            console.log('Correo de bienvenida enviado:', info.response);
+          }
+        });
+
+        // Respuesta al frontend
         res.status(200).send("ok");
       });
     });
   });
 });
-
 
 
 // ---------------- LOGIN ----------------

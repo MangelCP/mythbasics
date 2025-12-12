@@ -1,4 +1,4 @@
-// ==================== NUEVO: variable global ====================
+// ==================== Variable global ====================
 let usuarioAEditar = null;
 let accionPendiente = null;
 // ================================================================
@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // ==================== MODAL DE EDICIÓN ============================
+  // ==================== MODAL DE EDICION ============================
   window.editarUsuario = (nick) => {
     usuarioAEditar = nick;
     document.getElementById('modalEditar').style.display = 'flex';
@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:3000/api/usuarios/${usuarioAEditar}`, {
+      const res = await fetch(`http://localhost:3000/api/usuarios/${encodeURIComponent(usuarioAEditar)}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nuevoNick })
@@ -134,7 +134,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       cargarUsuarios();
 
     } catch (err) {
-      console.error('❌ Error al editar usuario:', err);
+      console.error('Error al editar usuario:', err);
       mostrarModal(err.message);
     }
   };
@@ -147,7 +147,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.borrarUsuario = (nick) => {
     mostrarModal(`¿Seguro que quieres borrar el usuario "${nick}"?`, async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/usuarios/${nick}`, { method: 'DELETE' });
+        const res = await fetch(`http://localhost:3000/api/usuarios/${encodeURIComponent(nick)}`, { method: 'DELETE' });
         if (!res.ok) throw new Error(`Error al borrar usuario: ${res.status}`);
         mostrarModal('Usuario borrado correctamente');
         cargarUsuarios();
@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.nombrarAdmin = (nick) => {
     mostrarModal(`¿Seguro que quieres hacer administrador al usuario "${nick}"?`, async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/usuarios/${nick}/admin`, { method: 'PATCH' });
+        const res = await fetch(`http://localhost:3000/api/usuarios/${encodeURIComponent(nick)}/admin`, { method: 'PATCH' });
         const data = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(data.error || `Error al nombrar administrador: ${res.status}`);
         mostrarModal('Usuario ahora es administrador');
